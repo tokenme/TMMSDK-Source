@@ -6,32 +6,283 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1D2CC8732111D16100F91A7B /* libTMMSDKMaker */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1D2CC8742111D16100F91A7B /* Build configuration list for PBXAggregateTarget "libTMMSDKMaker" */;
+			buildPhases = (
+				1D2CC8772111D16600F91A7B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = libTMMSDKMaker;
+			productName = libTMMSDKMaker;
+		};
+		1D951604210B093C00861C3D /* TMMSDKMaker */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1D951605210B093C00861C3D /* Build configuration list for PBXAggregateTarget "TMMSDKMaker" */;
+			buildPhases = (
+				1D951608210B094700861C3D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = TMMSDKMaker;
+			productName = TMMSDKMaker;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D15659D210B101000866C0F /* TMMDeviceInfo.h */; };
+		1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A2210B101000866C0F /* MSWeakTimer.h */; };
+		1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A6210B101000866C0F /* OpenIDFA.h */; };
+		1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */; };
+		1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */; };
+		1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */; };
+		1D1565BE210B16EC00866C0F /* UIScrollView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565BC210B16EC00866C0F /* UIScrollView+TMMHook.h */; };
+		1D2CC79C21102BD700F91A7B /* NSString+Hashes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */; };
+		1D2CC7A5211164EA00F91A7B /* TMMApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC79E21102CA600F91A7B /* TMMApi.h */; };
+		1D2CC80D2111BA5A00F91A7B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */; };
+		1D2CC80F2111BAAC00F91A7B /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */; };
+		1D2CC8112111BB7600F91A7B /* UICKeyChainStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */; };
+		1D2CC84F2111C8FE00F91A7B /* libTMMSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */; };
+		1D2CC8502111C8FE00F91A7B /* libTMMSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D2CC84D2111C8FE00F91A7B /* libTMMSDK.h */; };
+		1D2CC8542111CB5500F91A7B /* TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164E210F000E003CD5A6 /* TMMHook.m */; };
+		1D2CC8552111CB6300F91A7B /* TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361650210F0045003CD5A6 /* TMMHook.h */; };
+		1D2CC8572111CB9B00F91A7B /* TMMHookHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361652210F0359003CD5A6 /* TMMHookHelper.h */; };
+		1D2CC8582111CB9F00F91A7B /* TMMHookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361653210F0372003CD5A6 /* TMMHookHelper.m */; };
+		1D2CC8592111CBA600F91A7B /* UIWebView+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D482310210B1FE5007D2AB1 /* UIWebView+TMMHook.m */; };
+		1D2CC85A2111CBAB00F91A7B /* UIApplication+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */; };
+		1D2CC85B2111CBC100F91A7B /* UIViewController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B4210B13C600866C0F /* UIViewController+TMMHook.m */; };
+		1D2CC85C2111CBC600F91A7B /* UINavigationController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B8210B144400866C0F /* UINavigationController+TMMHook.m */; };
+		1D2CC85D2111CBCC00F91A7B /* UIScrollView+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565BD210B16EC00866C0F /* UIScrollView+TMMHook.m */; };
+		1D2CC85E2111CBD300F91A7B /* UITabBarController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */; };
+		1D2CC85F2111CBD800F91A7B /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
+		1D2CC8602111CBE000F91A7B /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
+		1D2CC8612111CBE400F91A7B /* TMMAES256.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CBDF4210F282F0000A208 /* TMMAES256.h */; };
+		1D2CC8622111CBE800F91A7B /* TMMAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CBDF5210F28650000A208 /* TMMAES256.m */; };
+		1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
+		1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
+		1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A5210B101000866C0F /* OpenIDFA.m */; };
+		1D2CC8662111CC0D00F91A7B /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
+		1D2CC8672111CC1200F91A7B /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
+		1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */; };
+		1D2CC8692111CC1C00F91A7B /* TMMPingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC7A72111682600F91A7B /* TMMPingRequest.m */; };
+		1D2CC86A2111CC2000F91A7B /* TMMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36165E210F23C7003CD5A6 /* TMMDevice.m */; };
+		1D2CC86B2111CC2500F91A7B /* TMMBeaconDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361655210F14CB003CD5A6 /* TMMBeaconDelegate.h */; };
+		1D2CC86C2111CC5400F91A7B /* UICKeyChainStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */; };
+		1D2CC86D2111CC5700F91A7B /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */; };
+		1D2CC86E2111CC5A00F91A7B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */; };
+		1D2CC86F2111CC5D00F91A7B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
+		1D2CC8702111CC5F00F91A7B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
+		1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
+		1D2CC8722111CE6F00F91A7B /* liblibTMMSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */; };
+		1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */; };
+		1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */; };
+		1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36165D210F23C7003CD5A6 /* TMMDevice.h */; };
+		1D482311210B1FE5007D2AB1 /* UIWebView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */; };
+		1D7CBDF9210F29940000A208 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
+		1D7CBDFB210F29A00000A208 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
+		1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
 		1D9515FE210B090900861C3D /* TMMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9515FC210B090900861C3D /* TMMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D95161F210B0A4F00861C3D /* TMMBeacon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1D2CC8492111C8FE00F91A7B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				1D2CC8502111C8FE00F91A7B /* libTMMSDK.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D15659C210B101000866C0F /* TMMDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMDeviceInfo.m; sourceTree = "<group>"; };
+		1D15659D210B101000866C0F /* TMMDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMDeviceInfo.h; sourceTree = "<group>"; };
+		1D1565A2210B101000866C0F /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
+		1D1565A3210B101000866C0F /* MSWeekTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeekTimer.m; sourceTree = "<group>"; };
+		1D1565A5210B101000866C0F /* OpenIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenIDFA.m; sourceTree = "<group>"; };
+		1D1565A6210B101000866C0F /* OpenIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenIDFA.h; sourceTree = "<group>"; };
+		1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TMMHook.h"; sourceTree = "<group>"; };
+		1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TMMHook.m"; sourceTree = "<group>"; };
+		1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TMMHook.h"; sourceTree = "<group>"; };
+		1D1565B4210B13C600866C0F /* UIViewController+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TMMHook.m"; sourceTree = "<group>"; };
+		1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TMMHook.h"; sourceTree = "<group>"; };
+		1D1565B8210B144400866C0F /* UINavigationController+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TMMHook.m"; sourceTree = "<group>"; };
+		1D1565BC210B16EC00866C0F /* UIScrollView+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TMMHook.h"; sourceTree = "<group>"; };
+		1D1565BD210B16EC00866C0F /* UIScrollView+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TMMHook.m"; sourceTree = "<group>"; };
+		1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
+		1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
+		1D2CC79E21102CA600F91A7B /* TMMApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMApi.h; sourceTree = "<group>"; };
+		1D2CC79F21102CE500F91A7B /* TMMApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMApi.m; sourceTree = "<group>"; };
+		1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMPingRequest.h; sourceTree = "<group>"; };
+		1D2CC7A72111682600F91A7B /* TMMPingRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMPingRequest.m; sourceTree = "<group>"; };
+		1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
+		1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSONModel.framework; sourceTree = "<group>"; };
+		1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UICKeyChainStore.framework; sourceTree = "<group>"; };
+		1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibTMMSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D2CC84D2111C8FE00F91A7B /* libTMMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libTMMSDK.h; sourceTree = "<group>"; };
+		1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libTMMSDK.m; sourceTree = "<group>"; };
+		1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+TMMHook.h"; sourceTree = "<group>"; };
+		1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+TMMHook.m"; sourceTree = "<group>"; };
+		1D36164E210F000E003CD5A6 /* TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMHook.m; sourceTree = "<group>"; };
+		1D361650210F0045003CD5A6 /* TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMHook.h; sourceTree = "<group>"; };
+		1D361652210F0359003CD5A6 /* TMMHookHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMHookHelper.h; sourceTree = "<group>"; };
+		1D361653210F0372003CD5A6 /* TMMHookHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMHookHelper.m; sourceTree = "<group>"; };
+		1D361655210F14CB003CD5A6 /* TMMBeaconDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMBeaconDelegate.h; sourceTree = "<group>"; };
+		1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+TMMHook.h"; sourceTree = "<group>"; };
+		1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+TMMHook.m"; sourceTree = "<group>"; };
+		1D36165D210F23C7003CD5A6 /* TMMDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMDevice.h; sourceTree = "<group>"; };
+		1D36165E210F23C7003CD5A6 /* TMMDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMDevice.m; sourceTree = "<group>"; };
+		1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TMMHook.h"; sourceTree = "<group>"; };
+		1D482310210B1FE5007D2AB1 /* UIWebView+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TMMHook.m"; sourceTree = "<group>"; };
+		1D7CBDF4210F282F0000A208 /* TMMAES256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMAES256.h; sourceTree = "<group>"; };
+		1D7CBDF5210F28650000A208 /* TMMAES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMAES256.m; sourceTree = "<group>"; };
+		1D7CBDF8210F29940000A208 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1D7CBDFC210F29CA0000A208 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1D9515F9210B090900861C3D /* TMMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9515FC210B090900861C3D /* TMMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMSDK.h; sourceTree = "<group>"; };
 		1D9515FD210B090900861C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D951609210B09A700861C3D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1D95161F210B0A4F00861C3D /* TMMBeacon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMBeacon.h; sourceTree = "<group>"; };
+		1D951620210B0A6B00861C3D /* TMMBeacon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMBeacon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D2CC8482111C8FE00F91A7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2CC86D2111CC5700F91A7B /* JSONModel.framework in Frameworks */,
+				1D2CC86E2111CC5A00F91A7B /* AFNetworking.framework in Frameworks */,
+				1D2CC8702111CC5F00F91A7B /* CoreTelephony.framework in Frameworks */,
+				1D2CC86F2111CC5D00F91A7B /* Security.framework in Frameworks */,
+				1D2CC86C2111CC5400F91A7B /* UICKeyChainStore.framework in Frameworks */,
+				1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D9515F5210B090900861C3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D2CC8722111CE6F00F91A7B /* liblibTMMSDK.a in Frameworks */,
+				1D2CC8112111BB7600F91A7B /* UICKeyChainStore.framework in Frameworks */,
+				1D2CC80F2111BAAC00F91A7B /* JSONModel.framework in Frameworks */,
+				1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */,
+				1D2CC80D2111BA5A00F91A7B /* AFNetworking.framework in Frameworks */,
+				1D7CBDFB210F29A00000A208 /* CoreTelephony.framework in Frameworks */,
+				1D7CBDF9210F29940000A208 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D15659B210B101000866C0F /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1D15659D210B101000866C0F /* TMMDeviceInfo.h */,
+				1D15659C210B101000866C0F /* TMMDeviceInfo.m */,
+			);
+			path = DeviceInfo;
+			sourceTree = "<group>";
+		};
+		1D1565A1210B101000866C0F /* MSWeekTimer */ = {
+			isa = PBXGroup;
+			children = (
+				1D1565A2210B101000866C0F /* MSWeakTimer.h */,
+				1D1565A3210B101000866C0F /* MSWeekTimer.m */,
+			);
+			path = MSWeekTimer;
+			sourceTree = "<group>";
+		};
+		1D1565A4210B101000866C0F /* OpenIDFA */ = {
+			isa = PBXGroup;
+			children = (
+				1D1565A6210B101000866C0F /* OpenIDFA.h */,
+				1D1565A5210B101000866C0F /* OpenIDFA.m */,
+			);
+			path = OpenIDFA;
+			sourceTree = "<group>";
+		};
+		1D1565AF210B11B900866C0F /* Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				1D361650210F0045003CD5A6 /* TMMHook.h */,
+				1D36164E210F000E003CD5A6 /* TMMHook.m */,
+				1D361652210F0359003CD5A6 /* TMMHookHelper.h */,
+				1D361653210F0372003CD5A6 /* TMMHookHelper.m */,
+				1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */,
+				1D482310210B1FE5007D2AB1 /* UIWebView+TMMHook.m */,
+				1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */,
+				1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */,
+				1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */,
+				1D1565B4210B13C600866C0F /* UIViewController+TMMHook.m */,
+				1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */,
+				1D1565B8210B144400866C0F /* UINavigationController+TMMHook.m */,
+				1D1565BC210B16EC00866C0F /* UIScrollView+TMMHook.h */,
+				1D1565BD210B16EC00866C0F /* UIScrollView+TMMHook.m */,
+				1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */,
+				1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */,
+				1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */,
+				1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */,
+			);
+			path = Hooks;
+			sourceTree = "<group>";
+		};
+		1D2CC79721102B9D00F91A7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */,
+				1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D2CC84C2111C8FE00F91A7B /* libTMMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1D2CC84D2111C8FE00F91A7B /* libTMMSDK.h */,
+				1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */,
+			);
+			path = libTMMSDK;
+			sourceTree = "<group>";
+		};
+		1D7CBDF3210F28110000A208 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				1D7CBDF4210F282F0000A208 /* TMMAES256.h */,
+				1D7CBDF5210F28650000A208 /* TMMAES256.m */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		1D7CBDF7210F29940000A208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */,
+				1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */,
+				1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */,
+				1D7CBDFC210F29CA0000A208 /* Security.framework */,
+				1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */,
+				1D7CBDF8210F29940000A208 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1D9515EF210B090900861C3D = {
 			isa = PBXGroup;
 			children = (
 				1D9515FB210B090900861C3D /* TMMSDK */,
+				1D2CC84C2111C8FE00F91A7B /* libTMMSDK */,
 				1D9515FA210B090900861C3D /* Products */,
+				1D7CBDF7210F29940000A208 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				1D9515F9210B090900861C3D /* TMMSDK.framework */,
+				1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,9 +299,33 @@
 			isa = PBXGroup;
 			children = (
 				1D9515FC210B090900861C3D /* TMMSDK.h */,
+				1D951609210B09A700861C3D /* PrefixHeader.pch */,
 				1D9515FD210B090900861C3D /* Info.plist */,
+				1D2CC79721102B9D00F91A7B /* Extensions */,
+				1D7CBDF3210F28110000A208 /* Encrypt */,
+				1D1565AF210B11B900866C0F /* Hooks */,
+				1D15659B210B101000866C0F /* DeviceInfo */,
+				1D1565A1210B101000866C0F /* MSWeekTimer */,
+				1D1565A4210B101000866C0F /* OpenIDFA */,
+				1D95161E210B0A4000861C3D /* SDK */,
 			);
 			path = TMMSDK;
+			sourceTree = "<group>";
+		};
+		1D95161E210B0A4000861C3D /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1D95161F210B0A4F00861C3D /* TMMBeacon.h */,
+				1D951620210B0A6B00861C3D /* TMMBeacon.m */,
+				1D2CC79E21102CA600F91A7B /* TMMApi.h */,
+				1D2CC79F21102CE500F91A7B /* TMMApi.m */,
+				1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */,
+				1D2CC7A72111682600F91A7B /* TMMPingRequest.m */,
+				1D36165D210F23C7003CD5A6 /* TMMDevice.h */,
+				1D36165E210F23C7003CD5A6 /* TMMDevice.m */,
+				1D361655210F14CB003CD5A6 /* TMMBeaconDelegate.h */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,13 +335,49 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D482311210B1FE5007D2AB1 /* UIWebView+TMMHook.h in Headers */,
+				1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */,
+				1D2CC86B2111CC2500F91A7B /* TMMBeaconDelegate.h in Headers */,
+				1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */,
+				1D2CC8552111CB6300F91A7B /* TMMHook.h in Headers */,
+				1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */,
+				1D2CC8572111CB9B00F91A7B /* TMMHookHelper.h in Headers */,
+				1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */,
+				1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */,
+				1D1565BE210B16EC00866C0F /* UIScrollView+TMMHook.h in Headers */,
+				1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */,
+				1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */,
+				1D2CC7A5211164EA00F91A7B /* TMMApi.h in Headers */,
+				1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */,
+				1D2CC8612111CBE400F91A7B /* TMMAES256.h in Headers */,
+				1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */,
 				1D9515FE210B090900861C3D /* TMMSDK.h in Headers */,
+				1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */,
+				1D2CC79C21102BD700F91A7B /* NSString+Hashes.h in Headers */,
+				1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1D2CC84A2111C8FE00F91A7B /* libTMMSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D2CC8512111C8FE00F91A7B /* Build configuration list for PBXNativeTarget "libTMMSDK" */;
+			buildPhases = (
+				1D2CC8472111C8FE00F91A7B /* Sources */,
+				1D2CC8482111C8FE00F91A7B /* Frameworks */,
+				1D2CC8492111C8FE00F91A7B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libTMMSDK;
+			productName = libTMMSDK;
+			productReference = 1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		1D9515F8210B090900861C3D /* TMMSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D951601210B090900861C3D /* Build configuration list for PBXNativeTarget "TMMSDK" */;
@@ -93,7 +405,16 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = tokenmama.io;
 				TargetAttributes = {
+					1D2CC84A2111C8FE00F91A7B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					1D2CC8732111D16100F91A7B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					1D9515F8210B090900861C3D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					1D951604210B093C00861C3D = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -111,6 +432,9 @@
 			projectRoot = "";
 			targets = (
 				1D9515F8210B090900861C3D /* TMMSDK */,
+				1D951604210B093C00861C3D /* TMMSDKMaker */,
+				1D2CC84A2111C8FE00F91A7B /* libTMMSDK */,
+				1D2CC8732111D16100F91A7B /* libTMMSDKMaker */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +449,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D2CC8772111D16600F91A7B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#xcodebuild -project TMMSDK.xcodeproj -target FrameworkMaker_Release;rm -rf build;\nproductName=\"lib${PROJECT_NAME}\"\ntarget=\"${productName}\"\ntmpDir=\"${PROJECT_TEMP_DIR}/build\"\nbuildDir=\"${SRCROOT}/build\"\nrm -rf \"${tmpDir}\"#清除编译临时文件\n\n#编译bundle\nxcodebuild -target \"${PROJECT_NAME}Bundle\" -configuration \"Release\" -sdk \"iphoneos\" build SYMROOT=\"${tmpDir}\" ONLY_ACTIVE_ARCH=\"NO\" VALID_ARCHS=\"arm64 armv7 armv7s i386 x86_64\"\n\nfunction buildLibs(){\n    sdks=(\"iphonesimulator\" \"iphoneos\")\n    configurations=(\"Debug\" \"Release\")\n    for configuration in ${configurations[@]}\n    do\n    for sdk in ${sdks[@]}\n    do\n    xcodebuild -target \"${target}\" -configuration \"${configuration}\" -sdk \"${sdk}\" build SYMROOT=\"${tmpDir}\" ONLY_ACTIVE_ARCH=\"NO\" VALID_ARCHS=\"arm64 armv7 armv7s i386 x86_64\"\n    done\n    done\n}\nfunction lipoLibs(){\n    #copy Release-iphoneos到 Frameworks 目录,然后 lipo -c 一份\n    frameworkDir=\"${buildDir}/Frameworks\"\n    [ -d \"${frameworkDir}\" ] || mkdir -p \"${frameworkDir}\"\n    cp -r \"${buildDir}/Release-iphoneos/lib${target}.a\" \"${frameworkDir}/\"\n    #lipo -c ... -o ..\n    lipo -c \"${buildDir}/Release-iphoneos/lib${target}.a\" \"${buildDir}/Release-iphonesimulator/lib${target}.a\" -o \"${frameworkDir}/lib${target}.a\"\n}\nfunction rmLibs(){\n    sdks=(\"iphonesimulator\" \"iphoneos\")\n    configurations=(\"Release\")\n    for configuration in ${configurations[@]}\n    do\n    for sdk in ${sdks[@]}\n    do\n    rm -rf \"${buildDir}/${configuration}-${sdk}/lib${target}.a\"\n    done\n    done\n}\nbuildLibs\nlipoLibs\n#rmLibs\n#cp to ios_libs\n#cp -Rf \"${buildDir}/Frameworks/${productName}.framework\" \"${buildDir}/Frameworks/${productName}.framework\"";
+		};
+		1D951608210B094700861C3D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#xcodebuild -project TMMSDK.xcodeproj -target FrameworkMaker_Release;rm -rf build;\nproductName=\"${PROJECT_NAME}\"\ntarget=\"${productName}\"\ntmpDir=\"${PROJECT_TEMP_DIR}/build\"\nbuildDir=\"${SRCROOT}/build\"\nrm -rf \"${tmpDir}\"#清除编译临时文件\n\n#编译bundle\nxcodebuild -target \"${PROJECT_NAME}Bundle\" -configuration \"Release\" -sdk \"iphoneos\" build SYMROOT=\"${tmpDir}\" ONLY_ACTIVE_ARCH=\"NO\" VALID_ARCHS=\"arm64 armv7 armv7s i386 x86_64\"\n\nfunction buildLibs(){\n    sdks=(\"iphonesimulator\" \"iphoneos\")\n    configurations=(\"Debug\" \"Release\")\n    for configuration in ${configurations[@]}\n    do\n    for sdk in ${sdks[@]}\n    do\n    xcodebuild -target \"${target}\" -configuration \"${configuration}\" -sdk \"${sdk}\" build SYMROOT=\"${tmpDir}\" ONLY_ACTIVE_ARCH=\"NO\" VALID_ARCHS=\"arm64 armv7 armv7s i386 x86_64\"\n    done\n    done\n}\nfunction lipoLibs(){\n    #copy Release-iphoneos到 Frameworks 目录,然后 lipo -c 一份\n    frameworkDir=\"${buildDir}/Frameworks\"\n    [ -d \"${frameworkDir}\" ] || mkdir -p \"${frameworkDir}\"\n    cp -r \"${buildDir}/Release-iphoneos/${productName}.framework\" \"${frameworkDir}/\"\n    #lipo -c ... -o ..\n    lipo -c \"${buildDir}/Release-iphoneos/${productName}.framework/${productName}\" \"${buildDir}/Release-iphonesimulator/${productName}.framework/${productName}\" -o \"${frameworkDir}/${productName}.framework/${productName}\"\n    rm -rf \"${frameworkDir}/${productName}.framework/_CodeSignature\"\n}\nfunction rmLibs(){\n    sdks=(\"iphonesimulator\" \"iphoneos\")\n    configurations=(\"Release\")\n    for configuration in ${configurations[@]}\n    do\n    for sdk in ${sdks[@]}\n    do\n    rm -rf \"${buildDir}/${configuration}-${sdk}/${productName}.framework\"\n    done\n    done\n}\nbuildLibs\nlipoLibs\n#rmLibs\n#cp to ios_libs\n#cp -Rf \"${buildDir}/Frameworks/${productName}.framework\" \"${buildDir}/Frameworks/${productName}.framework\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		1D2CC8472111C8FE00F91A7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2CC8692111CC1C00F91A7B /* TMMPingRequest.m in Sources */,
+				1D2CC85B2111CBC100F91A7B /* UIViewController+TMMHook.m in Sources */,
+				1D2CC8672111CC1200F91A7B /* TMMApi.m in Sources */,
+				1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */,
+				1D2CC84F2111C8FE00F91A7B /* libTMMSDK.m in Sources */,
+				1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */,
+				1D2CC85F2111CBD800F91A7B /* AppDelegate+TMMHook.m in Sources */,
+				1D2CC8602111CBE000F91A7B /* NSString+Hashes.m in Sources */,
+				1D2CC85A2111CBAB00F91A7B /* UIApplication+TMMHook.m in Sources */,
+				1D2CC86A2111CC2000F91A7B /* TMMDevice.m in Sources */,
+				1D2CC85D2111CBCC00F91A7B /* UIScrollView+TMMHook.m in Sources */,
+				1D2CC8622111CBE800F91A7B /* TMMAES256.m in Sources */,
+				1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */,
+				1D2CC85C2111CBC600F91A7B /* UINavigationController+TMMHook.m in Sources */,
+				1D2CC8542111CB5500F91A7B /* TMMHook.m in Sources */,
+				1D2CC8662111CC0D00F91A7B /* TMMBeacon.m in Sources */,
+				1D2CC8582111CB9F00F91A7B /* TMMHookHelper.m in Sources */,
+				1D2CC8592111CBA600F91A7B /* UIWebView+TMMHook.m in Sources */,
+				1D2CC85E2111CBD300F91A7B /* UITabBarController+TMMHook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D9515F4210B090900861C3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +515,72 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1D2CC8522111C8FE00F91A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/PrefixHeader.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D2CC8532111C8FE00F91A7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/PrefixHeader.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1D2CC8752111D16100F91A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1D2CC8762111D16100F91A7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		1D9515FF210B090900861C3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -257,11 +702,20 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = TMMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -269,6 +723,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -281,11 +740,20 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = TMMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +761,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -300,9 +773,45 @@
 			};
 			name = Release;
 		};
+		1D951606210B093C00861C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1D951607210B093C00861C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D2CC8512111C8FE00F91A7B /* Build configuration list for PBXNativeTarget "libTMMSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D2CC8522111C8FE00F91A7B /* Debug */,
+				1D2CC8532111C8FE00F91A7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D2CC8742111D16100F91A7B /* Build configuration list for PBXAggregateTarget "libTMMSDKMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D2CC8752111D16100F91A7B /* Debug */,
+				1D2CC8762111D16100F91A7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1D9515F3210B090900861C3D /* Build configuration list for PBXProject "TMMSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -317,6 +826,15 @@
 			buildConfigurations = (
 				1D951602210B090900861C3D /* Debug */,
 				1D951603210B090900861C3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D951605210B093C00861C3D /* Build configuration list for PBXAggregateTarget "TMMSDKMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D951606210B093C00861C3D /* Debug */,
+				1D951607210B093C00861C3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

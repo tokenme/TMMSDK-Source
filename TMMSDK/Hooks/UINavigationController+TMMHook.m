@@ -1,0 +1,51 @@
+//
+//  UINavigationController+TMMHook.m
+//  TMMSDK
+//
+//  Created by Syd on 2018/7/27.
+//  Copyright © 2018年 tokenmama.io. All rights reserved.
+//
+
+#import <objc/runtime.h>
+#import "UINavigationController+TMMHook.h"
+#import "TMMHookHelper.h"
+
+@implementation UINavigationController (TMMHook)
+
++ (void)hookUINavigationController_push
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method pushMethod = class_getInstanceMethod([self class], @selector(pushViewController:animated:));
+        Method hookMethod = class_getInstanceMethod([self class], @selector(hook_pushViewController:animated:));
+        method_exchangeImplementations(pushMethod, hookMethod);
+    });
+}
+
+
+- (void)hook_pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"pushViewController", @"push": NSStringFromClass([viewController class]) }];
+    });
+    [self hook_pushViewController:viewController animated:animated];
+}
+
+
++ (void)hookUINavigationController_pop
+{
+    Method popMethod = class_getInstanceMethod([self class], @selector(popViewControllerAnimated:));
+    Method hookMethod = class_getInstanceMethod([self class], @selector(hook_popViewControllerAnimated:));
+    method_exchangeImplementations(popMethod, hookMethod);
+}
+
+
+- (void)hook_popViewControllerAnimated:(BOOL)animated
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"popViewController" }];
+    });
+    [self hook_popViewControllerAnimated:animated];
+}
+
+@end

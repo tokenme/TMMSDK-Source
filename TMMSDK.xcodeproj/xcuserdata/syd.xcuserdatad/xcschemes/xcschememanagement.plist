@@ -9,6 +9,39 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TMMSDKMaker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>libTMMSDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>libTMMSDKMaker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1D2CC84A2111C8FE00F91A7B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1D9515F8210B090900861C3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1D951604210B093C00861C3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
