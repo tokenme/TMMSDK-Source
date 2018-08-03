@@ -11,8 +11,8 @@
 #import "TMMApi.h"
 #import "NSString+Hashes.h"
 
-NSString * const kAPI_VERSION = @"V2";
-NSString * const kAPI_GATEWAY = @"https://api.tokenmama.io/api";
+NSString * const kAPI_VERSION = @"1";
+NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io/api";
 
 @implementation TMMApi
 

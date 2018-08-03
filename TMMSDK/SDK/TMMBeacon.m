@@ -71,6 +71,10 @@ static TMMBeacon* _instance = nil;
     [_backgroundTimer invalidate];
 }
 
+- (NSString *) deviceId {
+    return self.device.idfa;
+}
+
 - (void) setHeartBeatInterval:(NSTimeInterval)heartBeatInterval {
     _heartBeatInterval = heartBeatInterval;
 }

@@ -15,6 +15,7 @@
 +(instancetype)initWithKey:(NSString *)key secret:(NSString *)secret;
 - (void) start;
 - (void) stop;
+- (NSString *) deviceId;
 @end
 
 #endif /* TMMBeacon_h */
