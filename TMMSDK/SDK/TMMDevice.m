@@ -18,6 +18,7 @@
         self.isEmulator = [TMMDeviceInfo isEmulator];
         self.isTablet = [TMMDeviceInfo isTablet];
         self.isJailBrojen = [TMMDeviceInfo isJailBrojen];
+        self.platform = @"ios";
         self.carrier = [TMMDeviceInfo getCarrier];
         self.country = [TMMDeviceInfo getDeviceCountry];
         self.timezone = [TMMDeviceInfo getTimezone];
@@ -28,6 +29,8 @@
         self.appBuildVersion = [TMMDeviceInfo getBuildVersion];
         self.ip = [TMMDeviceInfo getDeviceIPAdress];
         self.language = [TMMDeviceInfo getDeviceLanguage];
+        self.deviceType = [TMMDeviceInfo deviceTypeDetail];
+        self.osVersion = [TMMDeviceInfo getOSVersion];
         self.idfa = [TMMDeviceInfo IDFA];
         self.openIDFA = [OpenIDFA sameDayOpenIDFA];
     }

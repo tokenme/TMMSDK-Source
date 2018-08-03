@@ -63,7 +63,7 @@ static TMMBeacon* _instance = nil;
 
 - (void) start {
     NSLog(@"TMMBeacon Start!");
-    [self startHeartBeat: _heartBeatInterval];
+    [self saveDevice];
 }
 
 - (void) stop {
@@ -91,12 +91,10 @@ static TMMBeacon* _instance = nil;
     
     dispatch_queue_set_specific(self.privateQueue, (__bridge const void *)(self), (void *)TMMTimerQueueContext, NULL);
 }
-    
+
 - (void)heartbeatSend{
-    NSLog(@"TMMHeartbeat");
     __weak __typeof(self) weakSelf = self;
     NSUInteger du = _duration;
-    NSLog(@"%lu, %@", (unsigned long)du, _device.toJSONString);
     TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device];
     NSString *payload = [TMMAES256 AES256Encrypt: _appSecret Encrypttext: pingReq.toJSONString];
     [TMMApi callMethod:@"ping"
@@ -116,9 +114,24 @@ static TMMBeacon* _instance = nil;
     return;
 }
 
+- (void)saveDevice {
+    __weak __typeof(self) weakSelf = self;
+    NSString *payload = [TMMAES256 AES256Encrypt: _appSecret Encrypttext: _device.toJSONString];
+    [TMMApi callMethod:@"device/save"
+               payload:payload
+                   key:_appKey
+                secret:_appSecret
+               success:^(NSURLSessionDataTask *task, id responseObject) {
+                   if (!weakSelf) return;
+                   __strong typeof(self) strongSelf = weakSelf;
+                   [strongSelf startHeartBeat: strongSelf.heartBeatInterval];
+               }
+               failure:nil
+     ];
+}
+
 # pragma mark - hookNotification delegate
 - (void)hookNotification {
-    NSLog(@"hook notification");
     NSUInteger ts = [[NSDate date] timeIntervalSince1970];
     NSUInteger interval = ts - _latestActiveTS;
     _latestActiveTS = ts;

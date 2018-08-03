@@ -37,6 +37,8 @@
      @return 是否越狱
      */
 + (BOOL)isJailBrojen;
++ (NSString*) getOSVersion;
++ (NSString*) deviceTypeDetail;
 
     /**
      Gets the carrier name (network operator).

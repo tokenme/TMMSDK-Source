@@ -787,10 +787,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -814,10 +811,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -829,11 +823,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -843,11 +833,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -999,10 +985,7 @@
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/TMMSDK/TMMSDK.private.modulemap";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1041,10 +1024,7 @@
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/TMMSDK/TMMSDK.private.modulemap";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1057,10 +1037,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1070,10 +1047,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

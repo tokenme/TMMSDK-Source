@@ -22,7 +22,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
         Method noneMethod = class_getInstanceMethod(replacedClass, noneSel);
         BOOL didAddNoneMethod = class_addMethod(originalClass, originalSel, method_getImplementation(noneMethod), method_getTypeEncoding(noneMethod));
         if (didAddNoneMethod) {
-            NSLog(@"******** 没有实现 (%@) 方法，手动添加成功！！",NSStringFromSelector(originalSel));
+            //NSLog(@"******** 没有实现 (%@) 方法，手动添加成功！！",NSStringFromSelector(originalSel));
         }
         return;
     }
@@ -31,14 +31,14 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     BOOL didAddMethod = class_addMethod(originalClass, replacedSel, method_getImplementation(replacedMethod), method_getTypeEncoding(replacedMethod));
     if (didAddMethod) {
         // 添加成功
-        NSLog(@"******** 实现了 (%@) 方法并成功 Hook 为 --> (%@)",NSStringFromSelector(originalSel) ,NSStringFromSelector(replacedSel));
+        //NSLog(@"******** 实现了 (%@) 方法并成功 Hook 为 --> (%@)",NSStringFromSelector(originalSel) ,NSStringFromSelector(replacedSel));
         // 重新拿到添加被添加的 method,这里是关键(注意这里 originalClass, 不 replacedClass), 因为替换的方法已经添加到原类中了, 应该交换原类中的两个方法
         Method newMethod = class_getInstanceMethod(originalClass, replacedSel);
         // 实现交换
         method_exchangeImplementations(originalMethod, newMethod);
     }else{
         // 添加失败，则说明已经 hook 过该类的 delegate 方法，防止多次交换。
-        NSLog(@"******** 已替换过，避免多次替换 --> (%@)",NSStringFromClass(originalClass));
+        //NSLog(@"******** 已替换过，避免多次替换 --> (%@)",NSStringFromClass(originalClass));
     }
 }
 
@@ -66,7 +66,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 -(BOOL)hook_application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)dic
 {
     
-    NSLog(@"hooked didFinishLaunchingWithOptions");
+    //NSLog(@"hooked didFinishLaunchingWithOptions");
     [self hook_application:application didFinishLaunchingWithOptions:dic];
     return YES;
 }
@@ -74,80 +74,80 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 -(BOOL)none_application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)dic
 {
     
-    NSLog(@"none didFinishLaunchingWithOptions");
+    //NSLog(@"none didFinishLaunchingWithOptions");
     return YES;
 }
 
 - (BOOL)hook_application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     
-    NSLog(@"hooked handleOpenURL");
+    //NSLog(@"hooked handleOpenURL");
     [self hook_application:application handleOpenURL:url];
     return YES;
 }
 
 - (BOOL)none_application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     
-    NSLog(@"none handleOpenURL");
+    //NSLog(@"none handleOpenURL");
     return YES;
 }
 
 - (BOOL)hook_application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    NSLog(@"hooked openURL sourceApplication annotation");
+    //NSLog(@"hooked openURL sourceApplication annotation");
     [self hook_application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
     return YES;
 }
 
 - (BOOL)none_application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    NSLog(@"none openURL sourceApplication annotation");
+    //NSLog(@"none openURL sourceApplication annotation");
     return YES;
 }
 
 - (NSUInteger) hook_application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
-    NSLog(@"hooked supportedInterfaceOrientationsForWindow");
+    //NSLog(@"hooked supportedInterfaceOrientationsForWindow");
     [self hook_application:application supportedInterfaceOrientationsForWindow:window ];
     return 0;
 }
 
 - (NSUInteger) none_application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
-    NSLog(@"none supportedInterfaceOrientationsForWindow");
+    //NSLog(@"none supportedInterfaceOrientationsForWindow");
     return 0;
 }
 
 - (void)hook_applicationDidBecomeActive:(UIApplication *)application
 {
     [self hook_applicationDidBecomeActive:application];
-    NSLog(@"hooked applicationDidBecomeActive");
+    //NSLog(@"hooked applicationDidBecomeActive");
 }
 
 - (void)none_applicationDidBecomeActive:(UIApplication *)application
 {
-    NSLog(@"hooked applicationDidBecomeActive");
+    //NSLog(@"hooked applicationDidBecomeActive");
 }
 
 - (void)hook_applicationDidEnterBackground:(UIApplication *)application
 {
     [self hook_applicationDidEnterBackground:application];
-    NSLog(@"hooked applicationDidEnterBackground");
+    //NSLog(@"hooked applicationDidEnterBackground");
 }
 
 - (void)none_applicationDidEnterBackground:(UIApplication *)application
 {
-    NSLog(@"hooked applicationDidEnterBackground");
+    //NSLog(@"hooked applicationDidEnterBackground");
 }
 
 - (void)hook_applicationWillEnterForeground:(UIApplication *)application
 {
     [self hook_applicationWillEnterForeground:application];
-    NSLog(@"hooked applicationDidEnterBackground");
+    //NSLog(@"hooked applicationDidEnterBackground");
 }
 
 - (void)none_applicationWillEnterForeground:(UIApplication *)application
 {
-    NSLog(@"hooked applicationDidEnterBackground");
+    //NSLog(@"hooked applicationDidEnterBackground");
 }
 
 @end

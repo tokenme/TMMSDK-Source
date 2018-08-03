@@ -193,11 +193,9 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
 +(NSDictionary *)deviceInfo
     {
         NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
-        NSString *deviceType = [TMMDeviceInfo deviceTypeDetail];
         
-        NSString *OSVersion = [NSString stringWithFormat:@"%@ %@",[TMMDeviceInfo getSystemName],[TMMDeviceInfo getSystemVersion]];
-        [dic setObject:deviceType forKey:@"DeviceType"];
-        [dic setObject:OSVersion forKey:@"DeviceOsType"];
+        [dic setObject:[TMMDeviceInfo deviceTypeDetail] forKey:@"DeviceType"];
+        [dic setObject:[TMMDeviceInfo getOSVersion] forKey:@"DeviceOsType"];
         [dic setObject:[self getMacAddress] forKey:@"DeviceMac"];
         [dic setObject:[UIDevice currentDevice].model forKey:@"DeviceModel"];
         [dic setObject:[self getDeviceDisplayMetrics] forKey:@"DeviceMetrics"];
@@ -398,6 +396,10 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
 + (NSString*) getTimezone {
     NSTimeZone *currentTimeZone = [NSTimeZone localTimeZone];
     return currentTimeZone.name;
+}
+
++ (NSString*) getOSVersion {
+    return [NSString stringWithFormat:@"%@ %@",[TMMDeviceInfo getSystemName],[TMMDeviceInfo getSystemVersion]];
 }
     //获取设备型号
     //可根据https://www.theiphonewiki.com/wiki/Models#iPhone添加

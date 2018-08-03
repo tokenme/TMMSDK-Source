@@ -22,7 +22,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
         Method noneMethod = class_getInstanceMethod(replacedClass, noneSel);
         BOOL didAddNoneMethod = class_addMethod(originalClass, originalSel, method_getImplementation(noneMethod), method_getTypeEncoding(noneMethod));
         if (didAddNoneMethod) {
-            NSLog(@"******** 没有实现 (%@) 方法，手动添加成功！！",NSStringFromSelector(originalSel));
+            //NSLog(@"******** 没有实现 (%@) 方法，手动添加成功！！",NSStringFromSelector(originalSel));
         }
         return;
     }
@@ -31,14 +31,14 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     BOOL didAddMethod = class_addMethod(originalClass, replacedSel, method_getImplementation(replacedMethod), method_getTypeEncoding(replacedMethod));
     if (didAddMethod) {
         // 添加成功
-        NSLog(@"******** 实现了 (%@) 方法并成功 Hook 为 --> (%@)",NSStringFromSelector(originalSel) ,NSStringFromSelector(replacedSel));
+        //NSLog(@"******** 实现了 (%@) 方法并成功 Hook 为 --> (%@)",NSStringFromSelector(originalSel) ,NSStringFromSelector(replacedSel));
         // 重新拿到添加被添加的 method,这里是关键(注意这里 originalClass, 不 replacedClass), 因为替换的方法已经添加到原类中了, 应该交换原类中的两个方法
         Method newMethod = class_getInstanceMethod(originalClass, replacedSel);
         // 实现交换
         method_exchangeImplementations(originalMethod, newMethod);
     }else{
         // 添加失败，则说明已经 hook 过该类的 delegate 方法，防止多次交换。
-        NSLog(@"******** 已替换过，避免多次替换 --> (%@)",NSStringFromClass(originalClass));
+        //NSLog(@"******** 已替换过，避免多次替换 --> (%@)",NSStringFromClass(originalClass));
     }
 }
 
@@ -64,7 +64,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 
 - (void)owner_webViewDidStartLoad:(UIWebView *)webView {
     
-    NSLog(@"*********** owner_webViewDidStartLoad:");
+    //NSLog(@"*********** owner_webViewDidStartLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidStartLoad"}];
     });
@@ -73,7 +73,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 }
 
 - (void)none_webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"*********** none_webViewDidStartLoad:");
+    //NSLog(@"*********** none_webViewDidStartLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidStartLoad"}];
     });
@@ -82,7 +82,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 
 - (void)owner_webViewDidFinishLoad:(UIWebView *)webView {
     
-    NSLog(@"*********** owner_webViewDidFinishLoad:");
+    //NSLog(@"*********** owner_webViewDidFinishLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidFinishLoad"}];
     });
@@ -91,7 +91,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 }
 
 - (void)none_webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"*********** none_webViewDidFinishLoad:");
+    //NSLog(@"*********** none_webViewDidFinishLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidFinishLoad"}];
     });
