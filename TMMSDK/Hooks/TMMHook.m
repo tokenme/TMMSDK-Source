@@ -34,9 +34,9 @@ static TMMHook* _instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [[self alloc] init] ;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNotification) name:TMMHookNotificationName object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:_instance selector:@selector(notify:) name:TMMHookNotificationName object:nil];
         [AppDelegateTMMHook hookAppDelegate];
-        [UIApplication hookUIApplication];
+        //[UIApplication hookUIApplication];
         [UIViewController hookUIViewController];
         [UINavigationController hookUINavigationController_pop];
         [UINavigationController hookUINavigationController_push];
@@ -52,7 +52,7 @@ static TMMHook* _instance = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)addNotification {
+- (void)notify:(NSNotification *) userInfo {
     if (_delegate != nil) {
         [_delegate hookNotification];
     }

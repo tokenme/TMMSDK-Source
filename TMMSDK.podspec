@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "TMMSDK"
   s.version      = "0.0.1"
-  s.summary      = "TMM SDK for iOS"
+  s.summary      = "TMM Objective-C SDK for iOS"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "Foundation", "UIKit", "CoreTelephony", "Security", "AdSupport", ""
+  s.frameworks = "Foundation", "UIKit", "CoreTelephony", "Security", "AdSupport"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -129,7 +129,7 @@ Pod::Spec.new do |s|
 
   # s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  # s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.requires_arc = true
   s.dependency "JSONModel", "~> 1.7"
   s.dependency "AFNetworking", "~> 3.2"

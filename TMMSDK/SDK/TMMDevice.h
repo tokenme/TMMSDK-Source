@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JSONModel/JSONModel.h>
+#import "JSONModelLib.h"
 
 @interface TMMDevice: JSONModel
 

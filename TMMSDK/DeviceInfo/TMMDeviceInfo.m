@@ -20,7 +20,7 @@
 #import <AdSupport/AdSupport.h>
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
-#import <UICKeyChainStore/UICKeyChainStore.h>
+#import "UICKeyChainStore.h"
 
 #define kIsStringValid(text) (text && text!=NULL && text.length>0)
 NSString * const IDFA_SERVICE = @"io.tokenmama.sdk.idfa";
@@ -682,7 +682,9 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
 +(NSString*) getApplicationName{
     
     NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-    
+    if (appName == nil) {
+        return @"";
+    }
     NSMutableString *mutableAppName = [NSMutableString stringWithString:appName];
     return [mutableAppName copy];
 }

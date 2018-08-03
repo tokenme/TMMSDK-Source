@@ -39,11 +39,57 @@
 		1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */; };
 		1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */; };
 		1D1565BE210B16EC00866C0F /* UIScrollView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565BC210B16EC00866C0F /* UIScrollView+TMMHook.h */; };
+		1D1871762113174B007CFDBB /* TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164E210F000E003CD5A6 /* TMMHook.m */; };
+		1D1871772113174F007CFDBB /* TMMHookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361653210F0372003CD5A6 /* TMMHookHelper.m */; };
+		1D18717821131752007CFDBB /* UIWebView+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D482310210B1FE5007D2AB1 /* UIWebView+TMMHook.m */; };
+		1D18717921131756007CFDBB /* UIApplication+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */; };
+		1D18717A2113175A007CFDBB /* UIViewController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B4210B13C600866C0F /* UIViewController+TMMHook.m */; };
+		1D18717B2113175D007CFDBB /* UINavigationController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B8210B144400866C0F /* UINavigationController+TMMHook.m */; };
+		1D18717C21131760007CFDBB /* UIScrollView+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565BD210B16EC00866C0F /* UIScrollView+TMMHook.m */; };
+		1D18717D21131763007CFDBB /* UITabBarController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */; };
+		1D18717E21131766007CFDBB /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
+		1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
+		1D1871802113176C007CFDBB /* TMMAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CBDF5210F28650000A208 /* TMMAES256.m */; };
+		1D18718121131770007CFDBB /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
+		1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
+		1D1871832113177A007CFDBB /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A5210B101000866C0F /* OpenIDFA.m */; };
+		1D1871842113177E007CFDBB /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
+		1D18718521131782007CFDBB /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
+		1D18718621131785007CFDBB /* TMMPingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC7A72111682600F91A7B /* TMMPingRequest.m */; };
+		1D18718721131788007CFDBB /* TMMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36165E210F23C7003CD5A6 /* TMMDevice.m */; };
+		1D187189211318B1007CFDBB /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C202112FED800499C83 /* UICKeyChainStore.m */; };
+		1D18718A211318F9007CFDBB /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C112112FED800499C83 /* AFSecurityPolicy.h */; };
+		1D18718B211318F9007CFDBB /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C122112FED800499C83 /* AFNetworkReachabilityManager.h */; };
+		1D18718C211318F9007CFDBB /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C132112FED800499C83 /* AFURLSessionManager.h */; };
+		1D18718D211318F9007CFDBB /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C142112FED800499C83 /* AFURLRequestSerialization.h */; };
+		1D18718E211318F9007CFDBB /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C172112FED800499C83 /* AFURLResponseSerialization.h */; };
+		1D18718F211318F9007CFDBB /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C1D2112FED800499C83 /* AFCompatibilityMacros.h */; };
+		1D187190211318F9007CFDBB /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C1E2112FED800499C83 /* AFHTTPSessionManager.h */; };
+		1D18719121131906007CFDBB /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C152112FED800499C83 /* AFURLResponseSerialization.m */; };
+		1D18719221131906007CFDBB /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C162112FED800499C83 /* AFHTTPSessionManager.m */; };
+		1D18719321131906007CFDBB /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C182112FED800499C83 /* AFURLSessionManager.m */; };
+		1D18719421131906007CFDBB /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C192112FED800499C83 /* AFURLRequestSerialization.m */; };
+		1D18719521131906007CFDBB /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C1B2112FED800499C83 /* AFNetworkReachabilityManager.m */; };
+		1D18719621131906007CFDBB /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C1C2112FED800499C83 /* AFSecurityPolicy.m */; };
+		1D18719721131919007CFDBB /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3A2112FF2E00499C83 /* JSONModel.m */; };
+		1D18719821131919007CFDBB /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3B2112FF2E00499C83 /* JSONModelError.m */; };
+		1D18719921131919007CFDBB /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3E2112FF2E00499C83 /* JSONModelClassProperty.m */; };
+		1D18719A2113192F007CFDBB /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C3C2112FF2E00499C83 /* JSONModelClassProperty.h */; };
+		1D18719B2113192F007CFDBB /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C3D2112FF2E00499C83 /* JSONModel.h */; };
+		1D18719C2113192F007CFDBB /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C3F2112FF2E00499C83 /* JSONModelError.h */; };
+		1D18719D2113193E007CFDBB /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C442112FF2E00499C83 /* JSONHTTPClient.m */; };
+		1D18719E2113193E007CFDBB /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C452112FF2E00499C83 /* JSONAPI.m */; };
+		1D18719F2113193E007CFDBB /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C492112FF2E00499C83 /* JSONModel+networking.m */; };
+		1D1871A021131942007CFDBB /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C462112FF2E00499C83 /* JSONModel+networking.h */; };
+		1D1871A121131942007CFDBB /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C472112FF2E00499C83 /* JSONHTTPClient.h */; };
+		1D1871A221131942007CFDBB /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C482112FF2E00499C83 /* JSONAPI.h */; };
+		1D1871A321131949007CFDBB /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C352112FF2E00499C83 /* JSONValueTransformer.m */; };
+		1D1871A421131949007CFDBB /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C382112FF2E00499C83 /* JSONKeyMapper.m */; };
+		1D1871A52113194C007CFDBB /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C362112FF2E00499C83 /* JSONKeyMapper.h */; };
+		1D1871A62113194C007CFDBB /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C372112FF2E00499C83 /* JSONValueTransformer.h */; };
+		1D1871F421143365007CFDBB /* TMMSDK.private.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 1D1871F1211430AE007CFDBB /* TMMSDK.private.modulemap */; };
 		1D2CC79C21102BD700F91A7B /* NSString+Hashes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */; };
 		1D2CC7A5211164EA00F91A7B /* TMMApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC79E21102CA600F91A7B /* TMMApi.h */; };
-		1D2CC80D2111BA5A00F91A7B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */; };
-		1D2CC80F2111BAAC00F91A7B /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */; };
-		1D2CC8112111BB7600F91A7B /* UICKeyChainStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */; };
 		1D2CC84F2111C8FE00F91A7B /* libTMMSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */; };
 		1D2CC8502111C8FE00F91A7B /* libTMMSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D2CC84D2111C8FE00F91A7B /* libTMMSDK.h */; };
 		1D2CC8542111CB5500F91A7B /* TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164E210F000E003CD5A6 /* TMMHook.m */; };
@@ -69,17 +115,31 @@
 		1D2CC8692111CC1C00F91A7B /* TMMPingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC7A72111682600F91A7B /* TMMPingRequest.m */; };
 		1D2CC86A2111CC2000F91A7B /* TMMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36165E210F23C7003CD5A6 /* TMMDevice.m */; };
 		1D2CC86B2111CC2500F91A7B /* TMMBeaconDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361655210F14CB003CD5A6 /* TMMBeaconDelegate.h */; };
-		1D2CC86C2111CC5400F91A7B /* UICKeyChainStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */; };
-		1D2CC86D2111CC5700F91A7B /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */; };
-		1D2CC86E2111CC5A00F91A7B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */; };
 		1D2CC86F2111CC5D00F91A7B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
 		1D2CC8702111CC5F00F91A7B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
 		1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
-		1D2CC8722111CE6F00F91A7B /* liblibTMMSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */; };
 		1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */; };
 		1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */; };
 		1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36165D210F23C7003CD5A6 /* TMMDevice.h */; };
 		1D482311210B1FE5007D2AB1 /* UIWebView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */; };
+		1D5F2C292112FED800499C83 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C152112FED800499C83 /* AFURLResponseSerialization.m */; };
+		1D5F2C2A2112FED800499C83 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C162112FED800499C83 /* AFHTTPSessionManager.m */; };
+		1D5F2C2B2112FED800499C83 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C182112FED800499C83 /* AFURLSessionManager.m */; };
+		1D5F2C2C2112FED800499C83 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C192112FED800499C83 /* AFURLRequestSerialization.m */; };
+		1D5F2C2D2112FED800499C83 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C1B2112FED800499C83 /* AFNetworkReachabilityManager.m */; };
+		1D5F2C2E2112FED800499C83 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C1C2112FED800499C83 /* AFSecurityPolicy.m */; };
+		1D5F2C2F2112FED800499C83 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C202112FED800499C83 /* UICKeyChainStore.m */; };
+		1D5F2C4A2112FF2E00499C83 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C352112FF2E00499C83 /* JSONValueTransformer.m */; };
+		1D5F2C4B2112FF2E00499C83 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C382112FF2E00499C83 /* JSONKeyMapper.m */; };
+		1D5F2C4C2112FF2E00499C83 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3A2112FF2E00499C83 /* JSONModel.m */; };
+		1D5F2C4D2112FF2E00499C83 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3B2112FF2E00499C83 /* JSONModelError.m */; };
+		1D5F2C4E2112FF2E00499C83 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3E2112FF2E00499C83 /* JSONModelClassProperty.m */; };
+		1D5F2C4F2112FF2E00499C83 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C442112FF2E00499C83 /* JSONHTTPClient.m */; };
+		1D5F2C502112FF2E00499C83 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C452112FF2E00499C83 /* JSONAPI.m */; };
+		1D5F2C512112FF2E00499C83 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C492112FF2E00499C83 /* JSONModel+networking.m */; };
+		1D5F2C522112FF6200499C83 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C422112FF2E00499C83 /* JSONModelLib.h */; };
+		1D5F2C562112FFBA00499C83 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C1A2112FED800499C83 /* AFNetworking.h */; };
+		1D5F2C572112FFC800499C83 /* UICKeyChainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C212112FED800499C83 /* UICKeyChainStore.h */; };
 		1D7CBDF9210F29940000A208 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
 		1D7CBDFB210F29A00000A208 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
 		1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
@@ -115,15 +175,15 @@
 		1D1565B8210B144400866C0F /* UINavigationController+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TMMHook.m"; sourceTree = "<group>"; };
 		1D1565BC210B16EC00866C0F /* UIScrollView+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TMMHook.h"; sourceTree = "<group>"; };
 		1D1565BD210B16EC00866C0F /* UIScrollView+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TMMHook.m"; sourceTree = "<group>"; };
+		1D1871F021143037007CFDBB /* TMMSDK.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TMMSDK.xcconfig; sourceTree = "<group>"; };
+		1D1871F1211430AE007CFDBB /* TMMSDK.private.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = TMMSDK.private.modulemap; sourceTree = "<group>"; };
+		1D1871F3211430DF007CFDBB /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
 		1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
 		1D2CC79E21102CA600F91A7B /* TMMApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMApi.h; sourceTree = "<group>"; };
 		1D2CC79F21102CE500F91A7B /* TMMApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMApi.m; sourceTree = "<group>"; };
 		1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMPingRequest.h; sourceTree = "<group>"; };
 		1D2CC7A72111682600F91A7B /* TMMPingRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMPingRequest.m; sourceTree = "<group>"; };
-		1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
-		1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSONModel.framework; sourceTree = "<group>"; };
-		1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UICKeyChainStore.framework; sourceTree = "<group>"; };
 		1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibTMMSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2CC84D2111C8FE00F91A7B /* libTMMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libTMMSDK.h; sourceTree = "<group>"; };
 		1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libTMMSDK.m; sourceTree = "<group>"; };
@@ -140,6 +200,41 @@
 		1D36165E210F23C7003CD5A6 /* TMMDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMDevice.m; sourceTree = "<group>"; };
 		1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TMMHook.h"; sourceTree = "<group>"; };
 		1D482310210B1FE5007D2AB1 /* UIWebView+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TMMHook.m"; sourceTree = "<group>"; };
+		1D5F2C112112FED800499C83 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		1D5F2C122112FED800499C83 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		1D5F2C132112FED800499C83 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		1D5F2C142112FED800499C83 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		1D5F2C152112FED800499C83 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		1D5F2C162112FED800499C83 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		1D5F2C172112FED800499C83 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		1D5F2C182112FED800499C83 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		1D5F2C192112FED800499C83 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		1D5F2C1A2112FED800499C83 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		1D5F2C1B2112FED800499C83 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		1D5F2C1C2112FED800499C83 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		1D5F2C1D2112FED800499C83 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		1D5F2C1E2112FED800499C83 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		1D5F2C202112FED800499C83 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
+		1D5F2C212112FED800499C83 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		1D5F2C352112FF2E00499C83 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		1D5F2C362112FF2E00499C83 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		1D5F2C372112FF2E00499C83 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		1D5F2C382112FF2E00499C83 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		1D5F2C3A2112FF2E00499C83 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		1D5F2C3B2112FF2E00499C83 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		1D5F2C3C2112FF2E00499C83 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		1D5F2C3D2112FF2E00499C83 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		1D5F2C3E2112FF2E00499C83 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		1D5F2C3F2112FF2E00499C83 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		1D5F2C402112FF2E00499C83 /* JSONModel.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		1D5F2C412112FF2E00499C83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D5F2C422112FF2E00499C83 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		1D5F2C442112FF2E00499C83 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		1D5F2C452112FF2E00499C83 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		1D5F2C462112FF2E00499C83 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		1D5F2C472112FF2E00499C83 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		1D5F2C482112FF2E00499C83 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		1D5F2C492112FF2E00499C83 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
 		1D7CBDF4210F282F0000A208 /* TMMAES256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMAES256.h; sourceTree = "<group>"; };
 		1D7CBDF5210F28650000A208 /* TMMAES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMAES256.m; sourceTree = "<group>"; };
 		1D7CBDF8210F29940000A208 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -158,11 +253,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2CC86D2111CC5700F91A7B /* JSONModel.framework in Frameworks */,
-				1D2CC86E2111CC5A00F91A7B /* AFNetworking.framework in Frameworks */,
 				1D2CC8702111CC5F00F91A7B /* CoreTelephony.framework in Frameworks */,
 				1D2CC86F2111CC5D00F91A7B /* Security.framework in Frameworks */,
-				1D2CC86C2111CC5400F91A7B /* UICKeyChainStore.framework in Frameworks */,
 				1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,11 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2CC8722111CE6F00F91A7B /* liblibTMMSDK.a in Frameworks */,
-				1D2CC8112111BB7600F91A7B /* UICKeyChainStore.framework in Frameworks */,
-				1D2CC80F2111BAAC00F91A7B /* JSONModel.framework in Frameworks */,
 				1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */,
-				1D2CC80D2111BA5A00F91A7B /* AFNetworking.framework in Frameworks */,
 				1D7CBDFB210F29A00000A208 /* CoreTelephony.framework in Frameworks */,
 				1D7CBDF9210F29940000A208 /* AdSupport.framework in Frameworks */,
 			);
@@ -236,6 +324,14 @@
 			path = Hooks;
 			sourceTree = "<group>";
 		};
+		1D1871F2211430BD007CFDBB /* TMMSDKPrivate */ = {
+			isa = PBXGroup;
+			children = (
+				1D1871F3211430DF007CFDBB /* module.modulemap */,
+			);
+			path = TMMSDKPrivate;
+			sourceTree = "<group>";
+		};
 		1D2CC79721102B9D00F91A7B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +350,97 @@
 			path = libTMMSDK;
 			sourceTree = "<group>";
 		};
+		1D5F2C0F2112FED800499C83 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C102112FED800499C83 /* AFNetworking */,
+				1D5F2C332112FF2E00499C83 /* JSONModel */,
+				1D5F2C1F2112FED800499C83 /* UICKeyChainStore */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		1D5F2C102112FED800499C83 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C112112FED800499C83 /* AFSecurityPolicy.h */,
+				1D5F2C122112FED800499C83 /* AFNetworkReachabilityManager.h */,
+				1D5F2C132112FED800499C83 /* AFURLSessionManager.h */,
+				1D5F2C142112FED800499C83 /* AFURLRequestSerialization.h */,
+				1D5F2C152112FED800499C83 /* AFURLResponseSerialization.m */,
+				1D5F2C162112FED800499C83 /* AFHTTPSessionManager.m */,
+				1D5F2C172112FED800499C83 /* AFURLResponseSerialization.h */,
+				1D5F2C182112FED800499C83 /* AFURLSessionManager.m */,
+				1D5F2C192112FED800499C83 /* AFURLRequestSerialization.m */,
+				1D5F2C1A2112FED800499C83 /* AFNetworking.h */,
+				1D5F2C1B2112FED800499C83 /* AFNetworkReachabilityManager.m */,
+				1D5F2C1C2112FED800499C83 /* AFSecurityPolicy.m */,
+				1D5F2C1D2112FED800499C83 /* AFCompatibilityMacros.h */,
+				1D5F2C1E2112FED800499C83 /* AFHTTPSessionManager.h */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		1D5F2C1F2112FED800499C83 /* UICKeyChainStore */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C202112FED800499C83 /* UICKeyChainStore.m */,
+				1D5F2C212112FED800499C83 /* UICKeyChainStore.h */,
+			);
+			path = UICKeyChainStore;
+			sourceTree = "<group>";
+		};
+		1D5F2C332112FF2E00499C83 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C342112FF2E00499C83 /* JSONModelTransformations */,
+				1D5F2C392112FF2E00499C83 /* JSONModel */,
+				1D5F2C402112FF2E00499C83 /* JSONModel.modulemap */,
+				1D5F2C412112FF2E00499C83 /* Info.plist */,
+				1D5F2C422112FF2E00499C83 /* JSONModelLib.h */,
+				1D5F2C432112FF2E00499C83 /* JSONModelNetworking */,
+			);
+			name = JSONModel;
+			path = Dependencies/JSONModel;
+			sourceTree = SOURCE_ROOT;
+		};
+		1D5F2C342112FF2E00499C83 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C352112FF2E00499C83 /* JSONValueTransformer.m */,
+				1D5F2C362112FF2E00499C83 /* JSONKeyMapper.h */,
+				1D5F2C372112FF2E00499C83 /* JSONValueTransformer.h */,
+				1D5F2C382112FF2E00499C83 /* JSONKeyMapper.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		1D5F2C392112FF2E00499C83 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C3A2112FF2E00499C83 /* JSONModel.m */,
+				1D5F2C3B2112FF2E00499C83 /* JSONModelError.m */,
+				1D5F2C3C2112FF2E00499C83 /* JSONModelClassProperty.h */,
+				1D5F2C3D2112FF2E00499C83 /* JSONModel.h */,
+				1D5F2C3E2112FF2E00499C83 /* JSONModelClassProperty.m */,
+				1D5F2C3F2112FF2E00499C83 /* JSONModelError.h */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		1D5F2C432112FF2E00499C83 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F2C442112FF2E00499C83 /* JSONHTTPClient.m */,
+				1D5F2C452112FF2E00499C83 /* JSONAPI.m */,
+				1D5F2C462112FF2E00499C83 /* JSONModel+networking.h */,
+				1D5F2C472112FF2E00499C83 /* JSONHTTPClient.h */,
+				1D5F2C482112FF2E00499C83 /* JSONAPI.h */,
+				1D5F2C492112FF2E00499C83 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
 		1D7CBDF3210F28110000A208 /* Encrypt */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,9 +453,6 @@
 		1D7CBDF7210F29940000A208 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D2CC8102111BB7600F91A7B /* UICKeyChainStore.framework */,
-				1D2CC80E2111BAAC00F91A7B /* JSONModel.framework */,
-				1D2CC80C2111BA5A00F91A7B /* AFNetworking.framework */,
 				1D7CBDFC210F29CA0000A208 /* Security.framework */,
 				1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */,
 				1D7CBDF8210F29940000A208 /* AdSupport.framework */,
@@ -282,6 +466,7 @@
 				1D9515FB210B090900861C3D /* TMMSDK */,
 				1D2CC84C2111C8FE00F91A7B /* libTMMSDK */,
 				1D9515FA210B090900861C3D /* Products */,
+				1D5F2C0F2112FED800499C83 /* Dependencies */,
 				1D7CBDF7210F29940000A208 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -299,8 +484,11 @@
 			isa = PBXGroup;
 			children = (
 				1D9515FC210B090900861C3D /* TMMSDK.h */,
+				1D1871F021143037007CFDBB /* TMMSDK.xcconfig */,
+				1D1871F1211430AE007CFDBB /* TMMSDK.private.modulemap */,
 				1D951609210B09A700861C3D /* PrefixHeader.pch */,
 				1D9515FD210B090900861C3D /* Info.plist */,
+				1D1871F2211430BD007CFDBB /* TMMSDKPrivate */,
 				1D2CC79721102B9D00F91A7B /* Extensions */,
 				1D7CBDF3210F28110000A208 /* Encrypt */,
 				1D1565AF210B11B900866C0F /* Hooks */,
@@ -335,26 +523,44 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1871A021131942007CFDBB /* JSONModel+networking.h in Headers */,
+				1D18718D211318F9007CFDBB /* AFURLRequestSerialization.h in Headers */,
+				1D5F2C522112FF6200499C83 /* JSONModelLib.h in Headers */,
+				1D187190211318F9007CFDBB /* AFHTTPSessionManager.h in Headers */,
 				1D482311210B1FE5007D2AB1 /* UIWebView+TMMHook.h in Headers */,
 				1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */,
+				1D5F2C562112FFBA00499C83 /* AFNetworking.h in Headers */,
+				1D5F2C572112FFC800499C83 /* UICKeyChainStore.h in Headers */,
 				1D2CC86B2111CC2500F91A7B /* TMMBeaconDelegate.h in Headers */,
 				1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */,
 				1D2CC8552111CB6300F91A7B /* TMMHook.h in Headers */,
+				1D1871A221131942007CFDBB /* JSONAPI.h in Headers */,
 				1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */,
 				1D2CC8572111CB9B00F91A7B /* TMMHookHelper.h in Headers */,
+				1D18719B2113192F007CFDBB /* JSONModel.h in Headers */,
 				1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */,
+				1D18718F211318F9007CFDBB /* AFCompatibilityMacros.h in Headers */,
 				1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */,
+				1D1871A62113194C007CFDBB /* JSONValueTransformer.h in Headers */,
+				1D18718B211318F9007CFDBB /* AFNetworkReachabilityManager.h in Headers */,
+				1D1871A52113194C007CFDBB /* JSONKeyMapper.h in Headers */,
 				1D1565BE210B16EC00866C0F /* UIScrollView+TMMHook.h in Headers */,
 				1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */,
+				1D1871A121131942007CFDBB /* JSONHTTPClient.h in Headers */,
+				1D18719A2113192F007CFDBB /* JSONModelClassProperty.h in Headers */,
 				1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */,
+				1D18718A211318F9007CFDBB /* AFSecurityPolicy.h in Headers */,
 				1D2CC7A5211164EA00F91A7B /* TMMApi.h in Headers */,
 				1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */,
 				1D2CC8612111CBE400F91A7B /* TMMAES256.h in Headers */,
+				1D18718C211318F9007CFDBB /* AFURLSessionManager.h in Headers */,
 				1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */,
 				1D9515FE210B090900861C3D /* TMMSDK.h in Headers */,
 				1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */,
+				1D18718E211318F9007CFDBB /* AFURLResponseSerialization.h in Headers */,
 				1D2CC79C21102BD700F91A7B /* NSString+Hashes.h in Headers */,
 				1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */,
+				1D18719C2113192F007CFDBB /* JSONModelError.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,20 +693,35 @@
 				1D2CC85B2111CBC100F91A7B /* UIViewController+TMMHook.m in Sources */,
 				1D2CC8672111CC1200F91A7B /* TMMApi.m in Sources */,
 				1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */,
+				1D5F2C4F2112FF2E00499C83 /* JSONHTTPClient.m in Sources */,
 				1D2CC84F2111C8FE00F91A7B /* libTMMSDK.m in Sources */,
 				1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */,
+				1D5F2C2E2112FED800499C83 /* AFSecurityPolicy.m in Sources */,
 				1D2CC85F2111CBD800F91A7B /* AppDelegate+TMMHook.m in Sources */,
 				1D2CC8602111CBE000F91A7B /* NSString+Hashes.m in Sources */,
 				1D2CC85A2111CBAB00F91A7B /* UIApplication+TMMHook.m in Sources */,
+				1D5F2C4E2112FF2E00499C83 /* JSONModelClassProperty.m in Sources */,
 				1D2CC86A2111CC2000F91A7B /* TMMDevice.m in Sources */,
+				1D5F2C4A2112FF2E00499C83 /* JSONValueTransformer.m in Sources */,
 				1D2CC85D2111CBCC00F91A7B /* UIScrollView+TMMHook.m in Sources */,
 				1D2CC8622111CBE800F91A7B /* TMMAES256.m in Sources */,
+				1D5F2C2A2112FED800499C83 /* AFHTTPSessionManager.m in Sources */,
 				1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */,
 				1D2CC85C2111CBC600F91A7B /* UINavigationController+TMMHook.m in Sources */,
+				1D5F2C512112FF2E00499C83 /* JSONModel+networking.m in Sources */,
+				1D5F2C2B2112FED800499C83 /* AFURLSessionManager.m in Sources */,
+				1D5F2C502112FF2E00499C83 /* JSONAPI.m in Sources */,
+				1D5F2C4D2112FF2E00499C83 /* JSONModelError.m in Sources */,
+				1D5F2C4B2112FF2E00499C83 /* JSONKeyMapper.m in Sources */,
+				1D5F2C292112FED800499C83 /* AFURLResponseSerialization.m in Sources */,
 				1D2CC8542111CB5500F91A7B /* TMMHook.m in Sources */,
+				1D5F2C2F2112FED800499C83 /* UICKeyChainStore.m in Sources */,
 				1D2CC8662111CC0D00F91A7B /* TMMBeacon.m in Sources */,
 				1D2CC8582111CB9F00F91A7B /* TMMHookHelper.m in Sources */,
+				1D5F2C2C2112FED800499C83 /* AFURLRequestSerialization.m in Sources */,
 				1D2CC8592111CBA600F91A7B /* UIWebView+TMMHook.m in Sources */,
+				1D5F2C2D2112FED800499C83 /* AFNetworkReachabilityManager.m in Sources */,
+				1D5F2C4C2112FF2E00499C83 /* JSONModel.m in Sources */,
 				1D2CC85E2111CBD300F91A7B /* UITabBarController+TMMHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +730,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1871F421143365007CFDBB /* TMMSDK.private.modulemap in Sources */,
+				1D18718121131770007CFDBB /* TMMDeviceInfo.m in Sources */,
+				1D1871832113177A007CFDBB /* OpenIDFA.m in Sources */,
+				1D187189211318B1007CFDBB /* UICKeyChainStore.m in Sources */,
+				1D18717B2113175D007CFDBB /* UINavigationController+TMMHook.m in Sources */,
+				1D1871762113174B007CFDBB /* TMMHook.m in Sources */,
+				1D18718721131788007CFDBB /* TMMDevice.m in Sources */,
+				1D18719621131906007CFDBB /* AFSecurityPolicy.m in Sources */,
+				1D18717821131752007CFDBB /* UIWebView+TMMHook.m in Sources */,
+				1D18719E2113193E007CFDBB /* JSONAPI.m in Sources */,
+				1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */,
+				1D18719721131919007CFDBB /* JSONModel.m in Sources */,
+				1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */,
+				1D18717921131756007CFDBB /* UIApplication+TMMHook.m in Sources */,
+				1D18717E21131766007CFDBB /* AppDelegate+TMMHook.m in Sources */,
+				1D18717C21131760007CFDBB /* UIScrollView+TMMHook.m in Sources */,
+				1D1871A421131949007CFDBB /* JSONKeyMapper.m in Sources */,
+				1D18719221131906007CFDBB /* AFHTTPSessionManager.m in Sources */,
+				1D1871772113174F007CFDBB /* TMMHookHelper.m in Sources */,
+				1D18719D2113193E007CFDBB /* JSONHTTPClient.m in Sources */,
+				1D18718521131782007CFDBB /* TMMApi.m in Sources */,
+				1D18719321131906007CFDBB /* AFURLSessionManager.m in Sources */,
+				1D18719121131906007CFDBB /* AFURLResponseSerialization.m in Sources */,
+				1D18718621131785007CFDBB /* TMMPingRequest.m in Sources */,
+				1D18719F2113193E007CFDBB /* JSONModel+networking.m in Sources */,
+				1D18717A2113175A007CFDBB /* UIViewController+TMMHook.m in Sources */,
+				1D18719921131919007CFDBB /* JSONModelClassProperty.m in Sources */,
+				1D18719821131919007CFDBB /* JSONModelError.m in Sources */,
+				1D1871802113176C007CFDBB /* TMMAES256.m in Sources */,
+				1D1871A321131949007CFDBB /* JSONValueTransformer.m in Sources */,
+				1D18719421131906007CFDBB /* AFURLRequestSerialization.m in Sources */,
+				1D1871842113177E007CFDBB /* TMMBeacon.m in Sources */,
+				1D18719521131906007CFDBB /* AFNetworkReachabilityManager.m in Sources */,
+				1D18717D21131763007CFDBB /* UITabBarController+TMMHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +787,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +814,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,6 +829,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -577,6 +843,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -726,8 +997,12 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/TMMSDK/TMMSDK.private.modulemap";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -764,8 +1039,12 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/TMMSDK/TMMSDK.private.modulemap";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -778,6 +1057,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -787,6 +1070,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

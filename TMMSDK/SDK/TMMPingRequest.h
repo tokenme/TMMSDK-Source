@@ -8,7 +8,7 @@
 
 #ifndef TMMPingRequest_h
 #define TMMPingRequest_h
-#import <JSONModel/JSONModel.h>
+#import "JSONModelLib.h"
 
 @class TMMDevice;
 

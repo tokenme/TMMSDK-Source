@@ -1,6 +1,0 @@
-framework module UICKeyChainStore {
-  umbrella header "UICKeyChainStore.h"
-
-  export *
-  module * { export * }
-}

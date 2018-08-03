@@ -10,8 +10,9 @@
 #define PrefixHeader_pch
 
 #ifdef DEBUG
+#define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
 #else
-#define NSLog(...) {};
+// #define NSLog(...) {};
 #endif
 
 // Include any system framework and library headers here that should be included in all compilation units.

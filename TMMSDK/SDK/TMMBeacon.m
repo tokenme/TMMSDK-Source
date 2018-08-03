@@ -52,7 +52,7 @@ static TMMBeacon* _instance = nil;
     _instance.appKey = key;
     _instance.appSecret = secret;
     _instance.device = [[TMMDevice alloc] init];
-    _instance.hook = [TMMHook initWithDelegate:self];
+    _instance.hook = [TMMHook initWithDelegate:_instance];
     [_instance setHeartBeatInterval: DefaultHeartBeatInterval];
     return _instance ;
 }
@@ -62,10 +62,12 @@ static TMMBeacon* _instance = nil;
 }
 
 - (void) start {
+    NSLog(@"TMMBeacon Start!");
     [self startHeartBeat: _heartBeatInterval];
 }
 
 - (void) stop {
+    NSLog(@"TMMBeacon Stopped!");
     [_backgroundTimer invalidate];
 }
 
@@ -92,8 +94,9 @@ static TMMBeacon* _instance = nil;
     NSUInteger du = _duration;
     NSLog(@"%lu, %@", (unsigned long)du, _device.toJSONString);
     TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device];
+    NSString *payload = [TMMAES256 AES256Encrypt: _appSecret Encrypttext: pingReq.toJSONString];
     [TMMApi callMethod:@"ping"
-               payload:[TMMAES256 AES256Encrypt: _appSecret Encrypttext: pingReq.toJSONString]
+               payload:payload
                    key:_appKey
                 secret:_appSecret
                success:^(NSURLSessionDataTask *task, id responseObject) {
