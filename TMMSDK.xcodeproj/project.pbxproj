@@ -49,7 +49,6 @@
 		1D18717D21131763007CFDBB /* UITabBarController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */; };
 		1D18717E21131766007CFDBB /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
 		1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
-		1D1871802113176C007CFDBB /* TMMAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CBDF5210F28650000A208 /* TMMAES256.m */; };
 		1D18718121131770007CFDBB /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
 		1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
 		1D1871832113177A007CFDBB /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A5210B101000866C0F /* OpenIDFA.m */; };
@@ -104,8 +103,6 @@
 		1D2CC85E2111CBD300F91A7B /* UITabBarController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */; };
 		1D2CC85F2111CBD800F91A7B /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
 		1D2CC8602111CBE000F91A7B /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
-		1D2CC8612111CBE400F91A7B /* TMMAES256.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CBDF4210F282F0000A208 /* TMMAES256.h */; };
-		1D2CC8622111CBE800F91A7B /* TMMAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CBDF5210F28650000A208 /* TMMAES256.m */; };
 		1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
 		1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
 		1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A5210B101000866C0F /* OpenIDFA.m */; };
@@ -145,6 +142,14 @@
 		1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
 		1D9515FE210B090900861C3D /* TMMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9515FC210B090900861C3D /* TMMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D95161F210B0A4F00861C3D /* TMMBeacon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DDB1251211864AE00130C51 /* NSString+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB124F211864AE00130C51 /* NSString+Encryption.h */; };
+		1DDB1252211864AE00130C51 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB1250211864AE00130C51 /* NSString+Encryption.m */; };
+		1DDB12552118657D00130C51 /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB12532118657D00130C51 /* NSString+Base64.h */; };
+		1DDB12562118657D00130C51 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB12542118657D00130C51 /* NSString+Base64.m */; };
+		1DDB1259211865BB00130C51 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB1257211865BB00130C51 /* NSData+Base64.h */; };
+		1DDB125A211865BB00130C51 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB1258211865BB00130C51 /* NSData+Base64.m */; };
+		1DDB125D2119501400130C51 /* NSData+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB125B2119501400130C51 /* NSData+Hex.h */; };
+		1DDB125E2119501400130C51 /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB125C2119501400130C51 /* NSData+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -235,8 +240,6 @@
 		1D5F2C472112FF2E00499C83 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
 		1D5F2C482112FF2E00499C83 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
 		1D5F2C492112FF2E00499C83 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
-		1D7CBDF4210F282F0000A208 /* TMMAES256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMAES256.h; sourceTree = "<group>"; };
-		1D7CBDF5210F28650000A208 /* TMMAES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMAES256.m; sourceTree = "<group>"; };
 		1D7CBDF8210F29940000A208 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		1D7CBDFC210F29CA0000A208 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -246,6 +249,14 @@
 		1D951609210B09A700861C3D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1D95161F210B0A4F00861C3D /* TMMBeacon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMBeacon.h; sourceTree = "<group>"; };
 		1D951620210B0A6B00861C3D /* TMMBeacon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMBeacon.m; sourceTree = "<group>"; };
+		1DDB124F211864AE00130C51 /* NSString+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		1DDB1250211864AE00130C51 /* NSString+Encryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		1DDB12532118657D00130C51 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		1DDB12542118657D00130C51 /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		1DDB1257211865BB00130C51 /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		1DDB1258211865BB00130C51 /* NSData+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		1DDB125B2119501400130C51 /* NSData+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Hex.h"; sourceTree = "<group>"; };
+		1DDB125C2119501400130C51 /* NSData+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +348,14 @@
 			children = (
 				1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */,
 				1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */,
+				1DDB124F211864AE00130C51 /* NSString+Encryption.h */,
+				1DDB1250211864AE00130C51 /* NSString+Encryption.m */,
+				1DDB12532118657D00130C51 /* NSString+Base64.h */,
+				1DDB12542118657D00130C51 /* NSString+Base64.m */,
+				1DDB1257211865BB00130C51 /* NSData+Base64.h */,
+				1DDB1258211865BB00130C51 /* NSData+Base64.m */,
+				1DDB125B2119501400130C51 /* NSData+Hex.h */,
+				1DDB125C2119501400130C51 /* NSData+Hex.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,15 +460,6 @@
 			path = JSONModelNetworking;
 			sourceTree = "<group>";
 		};
-		1D7CBDF3210F28110000A208 /* Encrypt */ = {
-			isa = PBXGroup;
-			children = (
-				1D7CBDF4210F282F0000A208 /* TMMAES256.h */,
-				1D7CBDF5210F28650000A208 /* TMMAES256.m */,
-			);
-			path = Encrypt;
-			sourceTree = "<group>";
-		};
 		1D7CBDF7210F29940000A208 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,7 +500,6 @@
 				1D9515FD210B090900861C3D /* Info.plist */,
 				1D1871F2211430BD007CFDBB /* TMMSDKPrivate */,
 				1D2CC79721102B9D00F91A7B /* Extensions */,
-				1D7CBDF3210F28110000A208 /* Encrypt */,
 				1D1565AF210B11B900866C0F /* Hooks */,
 				1D15659B210B101000866C0F /* DeviceInfo */,
 				1D1565A1210B101000866C0F /* MSWeekTimer */,
@@ -541,19 +550,22 @@
 				1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */,
 				1D18718F211318F9007CFDBB /* AFCompatibilityMacros.h in Headers */,
 				1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */,
+				1DDB1251211864AE00130C51 /* NSString+Encryption.h in Headers */,
 				1D1871A62113194C007CFDBB /* JSONValueTransformer.h in Headers */,
 				1D18718B211318F9007CFDBB /* AFNetworkReachabilityManager.h in Headers */,
 				1D1871A52113194C007CFDBB /* JSONKeyMapper.h in Headers */,
 				1D1565BE210B16EC00866C0F /* UIScrollView+TMMHook.h in Headers */,
 				1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */,
 				1D1871A121131942007CFDBB /* JSONHTTPClient.h in Headers */,
+				1DDB125D2119501400130C51 /* NSData+Hex.h in Headers */,
 				1D18719A2113192F007CFDBB /* JSONModelClassProperty.h in Headers */,
 				1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */,
 				1D18718A211318F9007CFDBB /* AFSecurityPolicy.h in Headers */,
+				1DDB1259211865BB00130C51 /* NSData+Base64.h in Headers */,
 				1D2CC7A5211164EA00F91A7B /* TMMApi.h in Headers */,
 				1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */,
-				1D2CC8612111CBE400F91A7B /* TMMAES256.h in Headers */,
 				1D18718C211318F9007CFDBB /* AFURLSessionManager.h in Headers */,
+				1DDB12552118657D00130C51 /* NSString+Base64.h in Headers */,
 				1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */,
 				1D9515FE210B090900861C3D /* TMMSDK.h in Headers */,
 				1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */,
@@ -704,7 +716,6 @@
 				1D2CC86A2111CC2000F91A7B /* TMMDevice.m in Sources */,
 				1D5F2C4A2112FF2E00499C83 /* JSONValueTransformer.m in Sources */,
 				1D2CC85D2111CBCC00F91A7B /* UIScrollView+TMMHook.m in Sources */,
-				1D2CC8622111CBE800F91A7B /* TMMAES256.m in Sources */,
 				1D5F2C2A2112FED800499C83 /* AFHTTPSessionManager.m in Sources */,
 				1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */,
 				1D2CC85C2111CBC600F91A7B /* UINavigationController+TMMHook.m in Sources */,
@@ -736,12 +747,16 @@
 				1D187189211318B1007CFDBB /* UICKeyChainStore.m in Sources */,
 				1D18717B2113175D007CFDBB /* UINavigationController+TMMHook.m in Sources */,
 				1D1871762113174B007CFDBB /* TMMHook.m in Sources */,
+				1DDB12562118657D00130C51 /* NSString+Base64.m in Sources */,
+				1DDB1252211864AE00130C51 /* NSString+Encryption.m in Sources */,
+				1DDB125E2119501400130C51 /* NSData+Hex.m in Sources */,
 				1D18718721131788007CFDBB /* TMMDevice.m in Sources */,
 				1D18719621131906007CFDBB /* AFSecurityPolicy.m in Sources */,
 				1D18717821131752007CFDBB /* UIWebView+TMMHook.m in Sources */,
 				1D18719E2113193E007CFDBB /* JSONAPI.m in Sources */,
 				1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */,
 				1D18719721131919007CFDBB /* JSONModel.m in Sources */,
+				1DDB125A211865BB00130C51 /* NSData+Base64.m in Sources */,
 				1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */,
 				1D18717921131756007CFDBB /* UIApplication+TMMHook.m in Sources */,
 				1D18717E21131766007CFDBB /* AppDelegate+TMMHook.m in Sources */,
@@ -758,7 +773,6 @@
 				1D18717A2113175A007CFDBB /* UIViewController+TMMHook.m in Sources */,
 				1D18719921131919007CFDBB /* JSONModelClassProperty.m in Sources */,
 				1D18719821131919007CFDBB /* JSONModelError.m in Sources */,
-				1D1871802113176C007CFDBB /* TMMAES256.m in Sources */,
 				1D1871A321131949007CFDBB /* JSONValueTransformer.m in Sources */,
 				1D18719421131906007CFDBB /* AFURLRequestSerialization.m in Sources */,
 				1D1871842113177E007CFDBB /* TMMBeacon.m in Sources */,

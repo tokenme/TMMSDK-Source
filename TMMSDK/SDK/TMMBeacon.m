@@ -13,8 +13,8 @@
 #import "TMMHook.h"
 #import "TMMDevice.h"
 #import "TMMPingRequest.h"
-#import "TMMAES256.h"
 #import "TMMApi.h"
+#import "NSString+Encryption.h"
 
 static const char *TMMTimerQueueContext = "TMMTimerQueueContext";
 static const char *TMMTimerQueueName = "io.tokenmama.private_queue";
@@ -96,7 +96,7 @@ static TMMBeacon* _instance = nil;
     __weak __typeof(self) weakSelf = self;
     NSUInteger du = _duration;
     TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device];
-    NSString *payload = [TMMAES256 AES256Encrypt: _appSecret Encrypttext: pingReq.toJSONString];
+    NSString *payload = [pingReq.toJSONString desEncryptWithKey: _appSecret];
     [TMMApi callMethod:@"ping"
                payload:payload
                    key:_appKey
@@ -116,7 +116,7 @@ static TMMBeacon* _instance = nil;
 
 - (void)saveDevice {
     __weak __typeof(self) weakSelf = self;
-    NSString *payload = [TMMAES256 AES256Encrypt: _appSecret Encrypttext: _device.toJSONString];
+    NSString *payload = [_device.toJSONString desEncryptWithKey:_appSecret];
     [TMMApi callMethod:@"device/save"
                payload:payload
                    key:_appKey

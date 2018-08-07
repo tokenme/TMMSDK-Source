@@ -685,7 +685,12 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
     
     NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
     if (appName == nil) {
-        return @"";
+        NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+        if (bundleName == nil) {
+            return @"";
+        }
+        NSMutableString *mutableAppName = [NSMutableString stringWithString:bundleName];
+        return [mutableAppName copy];
     }
     NSMutableString *mutableAppName = [NSMutableString stringWithString:appName];
     return [mutableAppName copy];

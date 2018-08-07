@@ -12,7 +12,7 @@
 #import "NSString+Hashes.h"
 
 NSString * const kAPI_VERSION = @"1";
-NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io/api";
+NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io";
 
 @implementation TMMApi
 
@@ -28,7 +28,7 @@ NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io/api";
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     parameters[@"k"] = apiKey; // app_key
     parameters[@"v"] = kAPI_VERSION; // api version
-    parameters[@"t"] = [NSNumber numberWithDouble:ts]; // timestamp
+    parameters[@"t"] = [NSNumber numberWithInteger:round(ts)]; // timestamp
     parameters[@"r"] = [TMMApi randomAlphanumericStringWithLength:40]; // random string key
     parameters[@"p"] = payload; // data
     parameters[@"s"] = [TMMApi signByParams:[parameters copy] secret:secret]; // sign
@@ -65,7 +65,7 @@ NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io/api";
 
 + (NSString *)randomAlphanumericStringWithLength:(NSInteger)length
 {
-    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+{}|\":?><";
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!^*()_+{}|\\:=";
     NSMutableString *randomString = [NSMutableString stringWithCapacity:length];
     
     for (int i = 0; i < length; i++) {
@@ -86,8 +86,7 @@ NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io/api";
     }
     NSURLComponents *components = [[NSURLComponents alloc] init];
     components.queryItems = queryItems;
-    
-    return [[NSString stringWithFormat:@"%@%@%@", secret, components.query, secret] sha1];
+    return [[NSString stringWithFormat:@"%@%@%@", secret, components.query, secret] sha1Hash];
 }
 
 @end
