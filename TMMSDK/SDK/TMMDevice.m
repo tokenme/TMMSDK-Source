@@ -19,6 +19,7 @@
         self.isTablet = [TMMDeviceInfo isTablet];
         self.isJailBrojen = [TMMDeviceInfo isJailBrojen];
         self.platform = @"ios";
+        self.deviceName = [TMMDeviceInfo getDeviceName];
         self.carrier = [TMMDeviceInfo getCarrier];
         self.country = [TMMDeviceInfo getDeviceCountry];
         self.timezone = [TMMDeviceInfo getTimezone];

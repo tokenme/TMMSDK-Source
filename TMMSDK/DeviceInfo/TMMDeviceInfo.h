@@ -47,6 +47,7 @@
 + (NSString *) getCarrier;
 + (NSString *) getDeviceCountry;
 + (NSString*) getTimezone;
++ (NSString *) getDeviceName;
 + (NSString *) getSystemVersion;
 + (NSString *) getUserAgent;
     /**

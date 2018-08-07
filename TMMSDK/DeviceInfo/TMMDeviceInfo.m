@@ -213,6 +213,10 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
         return dic;
     }
 
++ (NSString *) getDeviceName {
+    return [[UIDevice currentDevice] name];
+}
+
 + (NSString *) getSystemName {
     return [[UIDevice currentDevice] systemName];
 }

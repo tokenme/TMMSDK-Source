@@ -14,6 +14,7 @@
 @property(nonatomic,assign) BOOL isEmulator;
 @property(nonatomic,assign) BOOL isTablet;
 @property(nonatomic,assign) BOOL isJailBrojen;
+@property(nonatomic,strong) NSString *deviceName;
 @property(nonatomic,strong) NSString *carrier;
 @property(nonatomic,strong) NSString *country;
 @property(nonatomic,strong) NSString *timezone;
