@@ -97,7 +97,7 @@ static TMMBeacon* _instance = nil;
     NSUInteger du = _duration;
     TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device];
     NSString *payload = [pingReq.toJSONString desEncryptWithKey: _appSecret];
-    [TMMApi callMethod:@"ping"
+    [TMMApi callMethod:@"device/ping"
                payload:payload
                    key:_appKey
                 secret:_appSecret
