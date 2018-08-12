@@ -95,6 +95,9 @@ static TMMBeacon* _instance = nil;
 - (void)heartbeatSend{
     __weak __typeof(self) weakSelf = self;
     NSUInteger du = _duration;
+    if (du == 0) {
+        return;
+    }
     TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device];
     NSString *payload = [pingReq.toJSONString desEncryptWithKey: _appSecret];
     [TMMApi callMethod:@"device/ping"
