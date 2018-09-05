@@ -1000,6 +1000,7 @@
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/TMMSDK/TMMSDK.private.modulemap";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1040,6 +1041,7 @@
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/TMMSDK/TMMSDK.private.modulemap";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tokenmama.TMMSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
