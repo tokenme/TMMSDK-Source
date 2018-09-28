@@ -29,6 +29,7 @@ static const char *TMMNotificationQueueName = "io.tokenmama.notification_queue";
 static const char *TMMAppLink = "https://tmm.tokenmama.io";
 static const NSTimeInterval DefaultHeartBeatInterval = 60;
 static const NSTimeInterval DefaultNotificationInterval = 30;
+static const NSTimeInterval DefaultToastFadeDuration = 1.0;
 
 @interface TMMBeacon() <TMMBeaconDelegate>
 @property (nonatomic, copy) NSString *appKey;
@@ -58,6 +59,8 @@ static const NSTimeInterval DefaultNotificationInterval = 30;
 
 @property (nonatomic, strong) NSString *toastPosition;
 
+@property (nonatomic, assign) NSTimeInterval toastFadeDuration;
+
 @end
 
 @implementation TMMBeacon
@@ -82,6 +85,15 @@ static TMMBeacon* _instance = nil;
     _instance.notificationEnabled = YES;
     _instance.toastPosition = [NSString stringWithString: TMMToastPositionTop];
     _instance.toastStyle = [[CSToastStyle alloc] initWithDefaultStyle];
+    _instance.toastStyle.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.9];
+    _instance.toastStyle.shadowOpacity = 0.6;
+    _instance.toastStyle.shadowOffset = CGSizeMake(0.0, 2.0);
+    _instance.toastStyle.shadowRadius = 4.0;
+    _instance.toastStyle.titleColor = UIColor.blackColor;
+    _instance.toastStyle.messageColor = UIColor.darkTextColor;
+    _instance.toastStyle.displayShadow = YES;
+    _instance.toastStyle.fadeDuration = DefaultToastFadeDuration;
+    _instance.toastStyle.imageSize = CGSizeMake(40.0, 40.0);
     [CSToastManager setSharedStyle:_instance.toastStyle];
     [CSToastManager setTapToDismissEnabled:YES];
     [CSToastManager setQueueEnabled:YES];
@@ -122,6 +134,11 @@ static TMMBeacon* _instance = nil;
 
 - (void) setToastMessageColor: (UIColor *) color {
     _toastStyle.messageColor = color;
+}
+
+- (void) setToastFadeDuration:(NSTimeInterval)duration {
+    _toastStyle.fadeDuration = duration;
+    _toastFadeDuration = duration;
 }
 
 - (NSString *) deviceId {
@@ -242,9 +259,9 @@ static TMMBeacon* _instance = nil;
                                        __strong typeof(self) strongSelf2 = weakSelf2;
                                        UIViewController *vc = [strongSelf2 rootViewController];
                                        NSString *link = [NSString stringWithUTF8String:TMMAppLink];
-                                       [vc.view makeToast:alertMessage
-                                                 duration:3.0
-                                                 position:CSToastPositionTop
+                                       [vc.view makeToast: alertMessage
+                                                 duration: strongSelf2.toastFadeDuration
+                                                 position: CSToastPositionTop
                                                     title: alertTitle
                                                     image: alertImage
                                                     style: nil

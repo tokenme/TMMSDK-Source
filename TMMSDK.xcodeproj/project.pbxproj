@@ -35,6 +35,7 @@
 /* Begin PBXBuildFile section */
 		1D0F47AB215DEAFB00385423 /* UIView+Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0F47A9215DEAFB00385423 /* UIView+Toast.h */; };
 		1D0F47AC215DEAFB00385423 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F47AA215DEAFB00385423 /* UIView+Toast.m */; };
+		1D0F47AD215DF52A00385423 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FF6B6215BD9B2001E69CD /* Localizable.strings */; };
 		1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D15659D210B101000866C0F /* TMMDeviceInfo.h */; };
 		1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A2210B101000866C0F /* MSWeakTimer.h */; };
 		1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A6210B101000866C0F /* OpenIDFA.h */; };
@@ -141,7 +142,6 @@
 		1D5F2C572112FFC800499C83 /* UICKeyChainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C212112FED800499C83 /* UICKeyChainStore.h */; };
 		1D5FF69B215BB3F0001E69CD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FF68F215BA134001E69CD /* Media.xcassets */; };
 		1D5FF69C215BB425001E69CD /* TMMSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FF695215BB379001E69CD /* TMMSDKBundle.bundle */; };
-		1D5FF6B4215BD9B2001E69CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FF6B6215BD9B2001E69CD /* Localizable.strings */; };
 		1D7CBDF9210F29940000A208 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
 		1D7CBDFB210F29A00000A208 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
 		1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
@@ -724,6 +724,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0F47AD215DF52A00385423 /* Localizable.strings in Resources */,
 				1D5FF69B215BB3F0001E69CD /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +734,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D5FF69C215BB425001E69CD /* TMMSDKBundle.bundle in Resources */,
-				1D5FF6B4215BD9B2001E69CD /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
