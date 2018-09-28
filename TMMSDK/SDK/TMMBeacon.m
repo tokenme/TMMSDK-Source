@@ -245,7 +245,7 @@ static TMMBeacon* _instance = nil;
                                    strongSelf.lastPoints = [currentPoints decimalNumberByAdding:[NSDecimalNumber zero]];
                                }
                                NSDecimalNumber *increasedPoints = [currentPoints decimalNumberBySubtracting:strongSelf.lastPoints];
-                               if (increasedPoints > [NSDecimalNumber numberWithDouble:0.001]) {
+                               if ([increasedPoints compare:[NSDecimalNumber numberWithDouble:0.001]] == NSOrderedDescending ) {
                                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                                    formatter.maximumFractionDigits = 4;
                                    formatter.groupingSeparator = @"";
