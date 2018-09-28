@@ -962,7 +962,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = NO;
-				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TMMSDKBundle/Info.plist;
 				INSTALL_PATH = "";
@@ -973,6 +973,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -983,7 +984,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = NO;
-				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TMMSDKBundle/Info.plist;
 				INSTALL_PATH = "";
@@ -993,6 +994,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
