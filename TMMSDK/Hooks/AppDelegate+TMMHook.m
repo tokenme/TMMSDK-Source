@@ -60,18 +60,20 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
         Hook_Method([[UIApplication sharedApplication].delegate class], @selector(applicationDidEnterBackground:), [self class], @selector(hook_applicationDidEnterBackground:), @selector(none_applicationDidEnterBackground:));
         
         Hook_Method([[UIApplication sharedApplication].delegate class], @selector(applicationWillEnterForeground:), [self class], @selector(hook_applicationWillEnterForeground:), @selector(none_applicationWillEnterForeground:));
+        
+        Hook_Method([[UIApplication sharedApplication].delegate class], @selector(application:didReceiveLocalNotification:), [self class], @selector(hook_application:didReceiveLocalNotification:), @selector(none_application:didReceiveLocalNotification:));
+        
+        Hook_Method([[UIApplication sharedApplication].delegate class], @selector(application:didFinishLaunchingWithOptions:), [self class], @selector(hook_application:didFinishLaunchingWithOptions:), @selector(none_application:didFinishLaunchingWithOptions:));
     });
 }
 
--(BOOL)hook_application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)dic
+-(BOOL)hook_application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    
-    //NSLog(@"hooked didFinishLaunchingWithOptions");
-    [self hook_application:application didFinishLaunchingWithOptions:dic];
+    [self hook_application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
--(BOOL)none_application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)dic
+-(BOOL)none_application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     
     //NSLog(@"none didFinishLaunchingWithOptions");
@@ -148,6 +150,17 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)none_applicationWillEnterForeground:(UIApplication *)application
 {
     //NSLog(@"hooked applicationDidEnterBackground");
+}
+    
+- (void)hook_application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification*) notification
+{
+    [self hook_application:application didReceiveLocalNotification:notification];
+    //NSLog(@"hooked application:didReceiveLocalNotification:");
+}
+    
+- (void)none_application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification*) notification
+{
+    //NSLog(@"hooked application:didReceiveLocalNotification:");
 }
 
 @end

@@ -10,5 +10,4 @@
 #define TMMHookHelper_h
 
 extern NSString * const TMMHookNotificationName;
-
 #endif /* TMMHookHelper_h */

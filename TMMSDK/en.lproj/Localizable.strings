@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  TMMSDK
+
+  Created by Syd Xu on 2018/9/26.
+  Copyright © 2018 tokenmama.io. All rights reserved.
+*/
+"TBCAlertTitle" = "New TBC Points";
+"TBCAlertMessage" = "You just earn %@ TBC points, check TBC Wallet for more information.";
+"TBCAlertCheck" = "Check";

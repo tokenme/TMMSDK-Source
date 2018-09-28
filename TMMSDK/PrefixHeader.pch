@@ -33,4 +33,12 @@
 #define kUserDefaults      [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 
+#define FrameworkPath  [[NSBundle mainBundle] pathForResource:@"Frameworks/TMMSDK" ofType:@"framework"]
+#define FrameworkBundle  [NSBundle bundleWithPath:FrameworkPath]
+
+#define TMMSDKBundlePath  [FrameworkBundle pathForResource:@"TMMSDKBundle" ofType:@"bundle"]
+#define TMMSDKBundle  [NSBundle bundleWithPath:TMMSDKBundlePath]
+
+#define I18n(key, comment) [FrameworkBundle localizedStringForKey:(key) value:@"" table:nil]
+
 #endif /* PrefixHeader_pch */

@@ -57,5 +57,5 @@ static TMMHook* _instance = nil;
         [_delegate hookNotification];
     }
 }
-
+    
 @end
