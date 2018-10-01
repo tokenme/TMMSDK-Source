@@ -29,7 +29,7 @@ static const char *TMMNotificationQueueName = "io.tokenmama.notification_queue";
 static const char *TMMAppLink = "https://tmm.tokenmama.io";
 static const NSTimeInterval DefaultHeartBeatInterval = 60;
 static const NSTimeInterval DefaultNotificationInterval = 30;
-static const NSTimeInterval DefaultToastFadeDuration = 1.0;
+static const NSTimeInterval DefaultToastFadeDuration = 3.0;
 
 @interface TMMBeacon() <TMMBeaconDelegate>
 @property (nonatomic, copy) NSString *appKey;
