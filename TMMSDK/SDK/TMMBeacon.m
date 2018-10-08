@@ -29,7 +29,7 @@ static const char *TMMNotificationQueueName = "io.tokenmama.notification_queue";
 static const char *TMMAppLink = "https://tmm.tokenmama.io";
 static const NSTimeInterval DefaultHeartBeatInterval = 60;
 static const NSTimeInterval DefaultNotificationInterval = 120;
-static const NSTimeInterval DefaultToastFadeDuration = 3.0;
+static const NSTimeInterval DefaultToastDuration = 3.0;
 
 @interface TMMBeacon() <TMMBeaconDelegate>
 @property (nonatomic, copy) NSString *appKey;
@@ -59,7 +59,7 @@ static const NSTimeInterval DefaultToastFadeDuration = 3.0;
 
 @property (nonatomic, strong) NSString *toastPosition;
 
-@property (nonatomic, assign) NSTimeInterval toastFadeDuration;
+@property (nonatomic, assign) NSTimeInterval toastDuration;
 
 @end
 
@@ -85,17 +85,17 @@ static TMMBeacon* _instance = nil;
     _instance.notificationEnabled = YES;
     _instance.toastPosition = [NSString stringWithString: TMMToastPositionTop];
     _instance.toastStyle = [[CSToastStyle alloc] initWithDefaultStyle];
-    _instance.toastStyle.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.9];
+    _instance.toastStyle.backgroundColor = [[UIColor alloc] initWithWhite:0.93 alpha:0.75];
     _instance.toastStyle.shadowOpacity = 0.6;
     _instance.toastStyle.shadowOffset = CGSizeMake(0.0, 2.0);
     _instance.toastStyle.shadowRadius = 4.0;
     _instance.toastStyle.titleColor = UIColor.blackColor;
     _instance.toastStyle.messageColor = UIColor.darkTextColor;
     _instance.toastStyle.displayShadow = YES;
-    _instance.toastStyle.fadeDuration = DefaultToastFadeDuration;
     _instance.toastStyle.imageSize = CGSizeMake(40.0, 40.0);
     [CSToastManager setSharedStyle:_instance.toastStyle];
     [CSToastManager setTapToDismissEnabled:YES];
+    [CSToastManager setDefaultDuration:DefaultToastDuration];
     [CSToastManager setQueueEnabled:YES];
     return _instance ;
 }
@@ -136,9 +136,9 @@ static TMMBeacon* _instance = nil;
     _toastStyle.messageColor = color;
 }
 
-- (void) setToastFadeDuration:(NSTimeInterval)duration {
-    _toastStyle.fadeDuration = duration;
-    _toastFadeDuration = duration;
+- (void) setToastDuration:(NSTimeInterval)duration {
+    [CSToastManager setDefaultDuration:DefaultToastDuration];
+    _toastDuration = duration;
 }
 
 - (NSString *) deviceId {
@@ -177,6 +177,10 @@ static TMMBeacon* _instance = nil;
                                                          dispatchQueue:self.notificationQueue];
     
     dispatch_queue_set_specific(self.notificationQueue, (__bridge const void *)(self), (void *)TMMNotificationQueueContext, NULL);
+}
+
+- (void)debugToast {
+    [self showToastWithIncreasePoints:[NSNumber numberWithInt:0.01]];
 }
 
 - (void)heartbeatSend{
@@ -246,32 +250,7 @@ static TMMBeacon* _instance = nil;
                                }
                                NSDecimalNumber *increasedPoints = [currentPoints decimalNumberBySubtracting:strongSelf.lastPoints];
                                if ([increasedPoints compare:[NSDecimalNumber numberWithDouble:0.001]] == NSOrderedDescending ) {
-                                   NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                                   formatter.maximumFractionDigits = 4;
-                                   formatter.groupingSeparator = @"";
-                                   formatter.numberStyle = NSNumberFormatterDecimalStyle;
-                                   NSString *alertTitle = I18n(@"TBCAlertTitle", "alert title");
-                                   NSString *alertMessage = [NSString stringWithFormat:I18n(@"TBCAlertMessage", "alert message"), [formatter stringFromNumber:increasedPoints]];
-                                   UIImage *alertImage = [UIImage imageNamed:@"Logo" inBundle:TMMSDKBundle compatibleWithTraitCollection:nil];
-                                   __weak __typeof(self) weakSelf2 = weakSelf;
-                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                       if (!weakSelf2) return;
-                                       __strong typeof(self) strongSelf2 = weakSelf2;
-                                       UIViewController *vc = [strongSelf2 rootViewController];
-                                       NSString *link = [NSString stringWithUTF8String:TMMAppLink];
-                                       [vc.view makeToast: alertMessage
-                                                 duration: strongSelf2.toastFadeDuration
-                                                 position: CSToastPositionTop
-                                                    title: alertTitle
-                                                    image: alertImage
-                                                    style: nil
-                                               completion:^(BOOL didTap) {
-                                                   if (didTap) {
-                                                       NSURL *url = [NSURL URLWithString:link];
-                                                       [[UIApplication sharedApplication] openURL:url];
-                                                   }
-                                               }];
-                                   });
+                                   [strongSelf showToastWithIncreasePoints: increasedPoints];
                                }
                            }
                        }
@@ -281,6 +260,35 @@ static TMMBeacon* _instance = nil;
      ];
 }
 
+- (void) showToastWithIncreasePoints:(NSNumber*)points  {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.maximumFractionDigits = 4;
+    formatter.groupingSeparator = @"";
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    NSString *alertTitle = I18n(@"TBCAlertTitle", "alert title");
+    NSString *alertMessage = [NSString stringWithFormat:I18n(@"TBCAlertMessage", "alert message"), [formatter stringFromNumber:points]];
+    UIImage *alertImage = [UIImage imageNamed:@"Logo" inBundle:TMMSDKBundle compatibleWithTraitCollection:nil];
+    __weak __typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (!weakSelf) return;
+        __strong typeof(self) strongSelf = weakSelf;
+        UIViewController *vc = [strongSelf rootViewController];
+        NSString *link = [NSString stringWithUTF8String:TMMAppLink];
+        [vc.view makeToast: alertMessage
+                  duration: strongSelf.toastDuration
+                  position: CSToastPositionTop
+                     title: alertTitle
+                     image: alertImage
+                     style: nil
+                completion:^(BOOL didTap) {
+                    if (didTap) {
+                        NSURL *url = [NSURL URLWithString:link];
+                        [[UIApplication sharedApplication] openURL:url];
+                    }
+                }];
+    });
+}
+                   
 - (UIViewController *) rootViewController {
     UIWindow *windowW = [UIApplication sharedApplication].keyWindow;
     return windowW.rootViewController;
