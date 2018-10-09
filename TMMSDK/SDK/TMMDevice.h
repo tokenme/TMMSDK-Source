@@ -26,7 +26,6 @@
 @property(nonatomic,strong) NSString *ip;
 @property(nonatomic,strong) NSString *language;
 @property(nonatomic,strong) NSString *idfa;
-@property(nonatomic,strong) NSString *openIDFA;
 @property(nonatomic,strong) NSString *deviceType;
 @property(nonatomic,strong) NSString *osVersion;
 @property(nonatomic,strong) NSString *platform;

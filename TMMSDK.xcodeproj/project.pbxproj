@@ -38,7 +38,6 @@
 		1D0F47AD215DF52A00385423 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FF6B6215BD9B2001E69CD /* Localizable.strings */; };
 		1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D15659D210B101000866C0F /* TMMDeviceInfo.h */; };
 		1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A2210B101000866C0F /* MSWeakTimer.h */; };
-		1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A6210B101000866C0F /* OpenIDFA.h */; };
 		1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */; };
 		1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */; };
 		1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */; };
@@ -55,7 +54,6 @@
 		1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
 		1D18718121131770007CFDBB /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
 		1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
-		1D1871832113177A007CFDBB /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A5210B101000866C0F /* OpenIDFA.m */; };
 		1D1871842113177E007CFDBB /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
 		1D18718521131782007CFDBB /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
 		1D18718621131785007CFDBB /* TMMPingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC7A72111682600F91A7B /* TMMPingRequest.m */; };
@@ -108,7 +106,6 @@
 		1D2CC8602111CBE000F91A7B /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
 		1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
 		1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
-		1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A5210B101000866C0F /* OpenIDFA.m */; };
 		1D2CC8662111CC0D00F91A7B /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
 		1D2CC8672111CC1200F91A7B /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
 		1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */; };
@@ -194,8 +191,6 @@
 		1D15659D210B101000866C0F /* TMMDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMDeviceInfo.h; sourceTree = "<group>"; };
 		1D1565A2210B101000866C0F /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
 		1D1565A3210B101000866C0F /* MSWeekTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeekTimer.m; sourceTree = "<group>"; };
-		1D1565A5210B101000866C0F /* OpenIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenIDFA.m; sourceTree = "<group>"; };
-		1D1565A6210B101000866C0F /* OpenIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenIDFA.h; sourceTree = "<group>"; };
 		1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TMMHook.h"; sourceTree = "<group>"; };
 		1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TMMHook.m"; sourceTree = "<group>"; };
 		1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TMMHook.h"; sourceTree = "<group>"; };
@@ -333,15 +328,6 @@
 				1D1565A3210B101000866C0F /* MSWeekTimer.m */,
 			);
 			path = MSWeekTimer;
-			sourceTree = "<group>";
-		};
-		1D1565A4210B101000866C0F /* OpenIDFA */ = {
-			isa = PBXGroup;
-			children = (
-				1D1565A6210B101000866C0F /* OpenIDFA.h */,
-				1D1565A5210B101000866C0F /* OpenIDFA.m */,
-			);
-			path = OpenIDFA;
 			sourceTree = "<group>";
 		};
 		1D1565AF210B11B900866C0F /* Hooks */ = {
@@ -541,7 +527,6 @@
 				1D1565AF210B11B900866C0F /* Hooks */,
 				1D15659B210B101000866C0F /* DeviceInfo */,
 				1D1565A1210B101000866C0F /* MSWeekTimer */,
-				1D1565A4210B101000866C0F /* OpenIDFA */,
 				1D95161E210B0A4000861C3D /* SDK */,
 			);
 			path = TMMSDK;
@@ -585,7 +570,6 @@
 				1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */,
 				1D2CC8572111CB9B00F91A7B /* TMMHookHelper.h in Headers */,
 				1D18719B2113192F007CFDBB /* JSONModel.h in Headers */,
-				1D1565AE210B101000866C0F /* OpenIDFA.h in Headers */,
 				1D18718F211318F9007CFDBB /* AFCompatibilityMacros.h in Headers */,
 				1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */,
 				1DDB1251211864AE00130C51 /* NSString+Encryption.h in Headers */,
@@ -789,7 +773,6 @@
 				1D5F2C4A2112FF2E00499C83 /* JSONValueTransformer.m in Sources */,
 				1D2CC85D2111CBCC00F91A7B /* UIScrollView+TMMHook.m in Sources */,
 				1D5F2C2A2112FED800499C83 /* AFHTTPSessionManager.m in Sources */,
-				1D2CC8652111CC0100F91A7B /* OpenIDFA.m in Sources */,
 				1D2CC85C2111CBC600F91A7B /* UINavigationController+TMMHook.m in Sources */,
 				1D5F2C512112FF2E00499C83 /* JSONModel+networking.m in Sources */,
 				1D5F2C2B2112FED800499C83 /* AFURLSessionManager.m in Sources */,
@@ -821,7 +804,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D18718121131770007CFDBB /* TMMDeviceInfo.m in Sources */,
-				1D1871832113177A007CFDBB /* OpenIDFA.m in Sources */,
 				1D187189211318B1007CFDBB /* UICKeyChainStore.m in Sources */,
 				1D18717B2113175D007CFDBB /* UINavigationController+TMMHook.m in Sources */,
 				1D1871762113174B007CFDBB /* TMMHook.m in Sources */,

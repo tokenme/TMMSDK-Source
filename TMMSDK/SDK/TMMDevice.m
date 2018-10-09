@@ -8,7 +8,6 @@
 
 #import "TMMDevice.h"
 #import "TMMDeviceInfo.h"
-#import "OpenIDFA.h"
 
 @implementation TMMDevice
 
@@ -33,7 +32,6 @@
         self.deviceType = [TMMDeviceInfo deviceTypeDetail];
         self.osVersion = [TMMDeviceInfo getOSVersion];
         self.idfa = [TMMDeviceInfo IDFA];
-        self.openIDFA = [OpenIDFA sameDayOpenIDFA];
     }
     return self;
 }
