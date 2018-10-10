@@ -23,7 +23,7 @@
             if (@available(iOS 11.0, *)) {
                 NSData *jsonData = [NSJSONSerialization dataWithJSONObject:logs options:NSJSONWritingSortedKeys error:nil];
                 NSString *jsonString =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-                self.logs = [jsonString sha1Hash];
+                self.logs = jsonString;
             }
             
         }
