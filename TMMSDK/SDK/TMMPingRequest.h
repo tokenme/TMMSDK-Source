@@ -13,11 +13,13 @@
 @class TMMDevice;
 
 @interface TMMPingRequest: JSONModel
+@property(nonatomic,strong) NSString* logs;
 @property(nonatomic,assign) NSUInteger duration;
 @property(nonatomic,strong) TMMDevice* device;
 
 - (id) initWithDuration:(NSUInteger) duration
-                           device:(TMMDevice *) device;
+                 device:(TMMDevice *) device
+                   logs:(NSArray *)logs;
 @end
 
 #endif /* TMMPingRequest_h */

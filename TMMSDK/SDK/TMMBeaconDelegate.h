@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol TMMBeaconDelegate <NSObject>
-- (void)hookNotification;
+- (void)hookNotification:(NSNotification *)info;
 @end

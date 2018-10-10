@@ -54,7 +54,7 @@ static TMMHook* _instance = nil;
 
 - (void)notify:(NSNotification *) userInfo {
     if (_delegate != nil) {
-        [_delegate hookNotification];
+        [_delegate hookNotification: userInfo];
     }
 }
     

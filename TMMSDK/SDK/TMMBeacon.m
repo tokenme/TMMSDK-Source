@@ -53,6 +53,8 @@ static const NSTimeInterval DefaultToastDuration = 3.0;
     
 @property (nonatomic, strong) NSDecimalNumber *lastPoints;
     
+@property (nonatomic, strong) NSMutableArray *logs;
+    
 @property (nonatomic, assign) BOOL notificationEnabled;
 
 @property (nonatomic, strong) CSToastStyle *toastStyle;
@@ -192,7 +194,7 @@ static TMMBeacon* _instance = nil;
     if (_device.isEmulator || _device.isJailBrojen) {
         return;
     }
-    TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device];
+    TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device logs:_logs];
     NSString *payload = [pingReq.toJSONString desEncryptWithKey: _appSecret];
     [TMMApi callMethod:@"device/ping"
                payload:payload
@@ -203,6 +205,7 @@ static TMMBeacon* _instance = nil;
                        if (!weakSelf) return;
                        __strong typeof(self) strongSelf = weakSelf;
                        strongSelf.duration = 0;
+                       [strongSelf.logs removeAllObjects];
                    });
                }
                failure:nil
@@ -295,7 +298,7 @@ static TMMBeacon* _instance = nil;
 }
 
 # pragma mark - hookNotification delegate
-- (void)hookNotification {
+- (void)hookNotification: (NSNotification *)info {
     NSUInteger ts = [[NSDate date] timeIntervalSince1970];
     NSUInteger interval = ts - _latestActiveTS;
     _latestActiveTS = ts;
@@ -303,6 +306,10 @@ static TMMBeacon* _instance = nil;
         return;
     }
     _duration += interval;
+    [_logs addObject:info.userInfo];
+    if ([_logs count] >= 1000) {
+        [_logs removeObjectAtIndex:0];
+    }
 }
 
 @end

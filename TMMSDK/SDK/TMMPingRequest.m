@@ -8,15 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "TMMPingRequest.h"
+#import "NSString+Hashes.h"
 
 @implementation TMMPingRequest
 
 - (id) initWithDuration:(NSUInteger) duration
-                           device:(TMMDevice *) device {
+                 device:(TMMDevice *) device
+                   logs:(NSArray *)logs {
     self = [super init];
     if (self) {
         self.duration = duration;
         self.device = device;
+        if ([NSJSONSerialization isValidJSONObject:logs]) {
+            if (@available(iOS 11.0, *)) {
+                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:logs options:NSJSONWritingSortedKeys error:nil];
+                NSString *jsonString =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                self.logs = [jsonString sha1Hash];
+            }
+            
+        }
     }
     return self;
 }
