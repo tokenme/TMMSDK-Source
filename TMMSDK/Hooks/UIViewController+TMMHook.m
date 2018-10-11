@@ -26,7 +26,8 @@
 - (void)hook_ViewDidAppear:(BOOL)animated
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"viewDidAppear"}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"viewDidAppear"}];
     });
     [self hook_ViewDidAppear:animated];
 }

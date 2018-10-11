@@ -75,7 +75,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)p_scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     //NSLog(@"%s", __func__);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"scrollViewWillBeginDragging" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"scrollViewWillBeginDragging" }];
     });
     [self p_scrollViewWillBeginDragging:scrollView];
 }
@@ -83,7 +84,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)p_scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     //NSLog(@"%s", __func__);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"scrollViewDidEndDecelerating" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"scrollViewDidEndDecelerating" }];
     });
     [self p_scrollViewDidEndDecelerating:scrollView];
     // 停止类型1、停止类型2
@@ -96,7 +98,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)p_scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     //NSLog(@"%s", __func__);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"scrollViewDidEndDragging" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"scrollViewDidEndDragging" }];
     });
     [self p_scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
     if (!decelerate) {
@@ -113,19 +116,24 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)add_scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     //NSLog(@"%s", __func__);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"scrollViewWillBeginDragging" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"scrollViewWillBeginDragging" }];
     });
 }
 
 - (void)add_scrollViewWillDecelerating:(UIScrollView *)scrollView {
     //NSLog(@"%s", __func__);
-    [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"scrollViewDidEndDecelerating" }];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"scrollViewDidEndDecelerating" }];
+    });
 }
 
 - (void)add_scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     //NSLog(@"%s", __func__);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"scrollViewDidEndDragging" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"scrollViewDidEndDragging" }];
     });
     // 停止类型1、停止类型2
     BOOL scrollToScrollStop = !scrollView.tracking && !scrollView.dragging && !scrollView.decelerating;

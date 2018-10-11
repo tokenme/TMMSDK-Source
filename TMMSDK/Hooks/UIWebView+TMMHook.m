@@ -66,7 +66,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     
     //NSLog(@"*********** owner_webViewDidStartLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidStartLoad"}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a":@"webViewDidStartLoad"}];
     });
     [self owner_webViewDidStartLoad:webView];
     
@@ -75,7 +76,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)none_webViewDidStartLoad:(UIWebView *)webView {
     //NSLog(@"*********** none_webViewDidStartLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidStartLoad"}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c":NSStringFromClass([self class]), @"a":@"webViewDidStartLoad"}];
     });
 }
 
@@ -84,7 +86,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     
     //NSLog(@"*********** owner_webViewDidFinishLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidFinishLoad"}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a":@"webViewDidFinishLoad"}];
     });
     [self owner_webViewDidFinishLoad:webView];
     
@@ -93,7 +96,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (void)none_webViewDidFinishLoad:(UIWebView *)webView {
     //NSLog(@"*********** none_webViewDidFinishLoad:");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": @"webView", @"action":@"webViewDidFinishLoad"}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a":@"webViewDidFinishLoad"}];
     });
 }
 

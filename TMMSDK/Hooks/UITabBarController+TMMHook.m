@@ -24,7 +24,8 @@
 - (void)hook_tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([viewController class]), @"action": @"tabBarController:shouldSelectViewController:" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"tabBarController:shouldSelectViewController:", @"v": NSStringFromClass([viewController class]) }];
     });
     [self hook_tabBarController:tabBarController shouldSelectViewController:viewController];
 }

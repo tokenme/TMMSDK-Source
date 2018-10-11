@@ -53,7 +53,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (BOOL)hook_sendAction:(SEL)action to:(nullable id)target from:(nullable id)sender forEvent:(nullable UIEvent *)event;
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action":NSStringFromSelector(action), @"target": NSStringFromClass([target class])}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"class": NSStringFromClass([self class]), @"action":NSStringFromSelector(action), @"target": NSStringFromClass([target class])}];
     });
     return [self hook_sendAction:action to:target from:sender forEvent:event];
 }
@@ -61,7 +62,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (BOOL)none_sendAction:(SEL)action to:(nullable id)target from:(nullable id)sender forEvent:(nullable UIEvent *)event;
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action":NSStringFromSelector(action), @"target": NSStringFromClass([target class])}];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"class": NSStringFromClass([self class]), @"action":NSStringFromSelector(action), @"target": NSStringFromClass([target class])}];
     });
     return YES;
 }

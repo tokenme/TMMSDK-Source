@@ -26,7 +26,8 @@
 - (void)hook_pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"pushViewController", @"push": NSStringFromClass([viewController class]) }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"a": @"pushViewController", @"v": NSStringFromClass([viewController class]) }];
     });
     [self hook_pushViewController:viewController animated:animated];
 }
@@ -43,7 +44,8 @@
 - (void)hook_popViewControllerAnimated:(BOOL)animated
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"class": NSStringFromClass([self class]), @"action": @"popViewController" }];
+        NSTimeInterval ts = [[NSDate date] timeIntervalSince1970];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMMHookNotificationName object:nil userInfo:@{@"t": [NSNumber numberWithInteger:round(ts)], @"c": NSStringFromClass([self class]), @"v": @"popViewController" }];
     });
     [self hook_popViewControllerAnimated:animated];
 }

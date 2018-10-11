@@ -26,10 +26,11 @@ static const char *TMMTimerQueueContext = "TMMTimerQueueContext";
 static const char *TMMNotificationQueueContext = "TMMNotificationQueueContext";
 static const char *TMMTimerQueueName = "io.tokenmama.private_queue";
 static const char *TMMNotificationQueueName = "io.tokenmama.notification_queue";
-static const char *TMMAppLink = "https://tmm.tokenmama.io";
+static const char *TMMAppLink = "https://tmm.tokenmama.io/app/ios";
 static const NSTimeInterval DefaultHeartBeatInterval = 60;
 static const NSTimeInterval DefaultNotificationInterval = 120;
 static const NSTimeInterval DefaultToastDuration = 3.0;
+static const NSUInteger DefaultMaxLogs = 100;
 
 @interface TMMBeacon() <TMMBeaconDelegate>
 @property (nonatomic, copy) NSString *appKey;
@@ -82,6 +83,7 @@ static TMMBeacon* _instance = nil;
     _instance.appSecret = secret;
     _instance.device = [[TMMDevice alloc] init];
     _instance.hook = [TMMHook initWithDelegate:_instance];
+    _instance.logs = [[NSMutableArray alloc] initWithCapacity:1024];
     [_instance setHeartBeatInterval: DefaultHeartBeatInterval];
     [_instance setNotificationInterval: DefaultNotificationInterval];
     _instance.notificationEnabled = YES;
@@ -97,7 +99,7 @@ static TMMBeacon* _instance = nil;
     _instance.toastStyle.imageSize = CGSizeMake(40.0, 40.0);
     [CSToastManager setSharedStyle:_instance.toastStyle];
     [CSToastManager setTapToDismissEnabled:YES];
-    [CSToastManager setDefaultDuration:DefaultToastDuration];
+    [_instance setToastDuration:DefaultToastDuration];
     [CSToastManager setQueueEnabled:YES];
     return _instance ;
 }
@@ -139,7 +141,7 @@ static TMMBeacon* _instance = nil;
 }
 
 - (void) setToastDuration:(NSTimeInterval)duration {
-    [CSToastManager setDefaultDuration:DefaultToastDuration];
+    [CSToastManager setDefaultDuration:duration];
     _toastDuration = duration;
 }
 
@@ -306,10 +308,12 @@ static TMMBeacon* _instance = nil;
         return;
     }
     _duration += interval;
+    
     [_logs addObject:info.userInfo];
-    if ([_logs count] >= 1000) {
+    if ([_logs count] >= DefaultMaxLogs) {
         [_logs removeObjectAtIndex:0];
     }
+    //NSLog(@"logs:%@", _logs);
 }
 
 @end
