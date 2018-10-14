@@ -83,6 +83,7 @@ extern const NSString * CSToastPositionBottom;
          position:(id)position
             title:(NSString *)title
             image:(UIImage *)image
+         imageURL:(NSURL *) imageURL
             style:(CSToastStyle *)style
        completion:(void(^)(BOOL didTap))completion;
 
@@ -103,6 +104,7 @@ extern const NSString * CSToastPositionBottom;
 - (UIView *)toastViewForMessage:(NSString *)message
                           title:(NSString *)title
                           image:(UIImage *)image
+                       imageURL:(NSURL *) imageURL
                           style:(CSToastStyle *)style;
 
 /**

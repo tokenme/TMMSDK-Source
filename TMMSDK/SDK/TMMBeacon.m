@@ -26,7 +26,6 @@ static const char *TMMTimerQueueContext = "TMMTimerQueueContext";
 static const char *TMMNotificationQueueContext = "TMMNotificationQueueContext";
 static const char *TMMTimerQueueName = "io.tokenmama.private_queue";
 static const char *TMMNotificationQueueName = "io.tokenmama.notification_queue";
-static const char *TMMAppLink = "https://tmm.tokenmama.io/app/ios";
 static const NSTimeInterval DefaultHeartBeatInterval = 60;
 static const NSTimeInterval DefaultNotificationInterval = 120;
 static const NSTimeInterval DefaultToastDuration = 3.0;
@@ -51,8 +50,6 @@ static const NSUInteger DefaultMaxLogs = 100;
 @property (nonatomic, assign) NSUInteger duration;
 
 @property (nonatomic, strong) TMMDevice *device;
-    
-@property (nonatomic, strong) NSDecimalNumber *lastPoints;
     
 @property (nonatomic, strong) NSMutableArray *logs;
     
@@ -184,7 +181,14 @@ static TMMBeacon* _instance = nil;
 }
 
 - (void)debugToast {
-    [self showToastWithIncreasePoints:[NSNumber numberWithInt:0.01]];
+    NSString *alertTitle = I18n(@"TBCAlertTitle", "alert title");
+    NSString *alertMessage = [NSString stringWithFormat:I18n(@"TBCAlertMessage", "alert message"), "0.12"];
+    UIImage *alertImage = [UIImage imageNamed:@"Logo" inBundle:TMMSDKBundle compatibleWithTraitCollection:nil];
+    [self showToastWithTitle:alertTitle
+                 description:alertMessage
+                       image:alertImage
+                    imageURL:nil
+                        link:@"https://tmm.tokenmama.io/app/ios"];
 }
 
 - (void)heartbeatSend{
@@ -247,17 +251,22 @@ static TMMBeacon* _instance = nil;
                    if (!weakSelf) return;
                    __strong typeof(self) strongSelf = weakSelf;
                    if (responseObject) {
-                       if (responseObject[@"points"] != [NSNull null]) {
-                           if ([responseObject[@"points"] isKindOfClass:[NSString class]]) {
-                               NSDecimalNumber *currentPoints = [[NSDecimalNumber alloc] initWithString:responseObject[@"points"]];
-                               if (strongSelf.lastPoints == nil) {
-                                   strongSelf.lastPoints = [currentPoints decimalNumberByAdding:[NSDecimalNumber zero]];
-                               }
-                               NSDecimalNumber *increasedPoints = [currentPoints decimalNumberBySubtracting:strongSelf.lastPoints];
-                               if ([increasedPoints compare:[NSDecimalNumber numberWithDouble:0.001]] == NSOrderedDescending ) {
-                                   [strongSelf showToastWithIncreasePoints: increasedPoints];
-                               }
+                       if (responseObject[@"title"] != [NSNull null] && [responseObject[@"title"] isKindOfClass:[NSString class]]) {
+                           NSString *alertTitle = [NSString stringWithString:responseObject[@"title"]];
+                           NSString *alertMessage = [[NSString alloc] init];
+                           NSString *link = [[NSString alloc] init];
+                           NSString *imageLink = [[NSString alloc] init];
+                           if (responseObject[@"desc"] != [NSNull null] && [responseObject[@"desc"] isKindOfClass:[NSString class]]) {
+                               alertMessage = [NSString stringWithString:responseObject[@"desc"]];
                            }
+                           if (responseObject[@"link"] != [NSNull null] && [responseObject[@"link"] isKindOfClass:[NSString class]]) {
+                               link = [NSString stringWithString:responseObject[@"link"]];
+                           }
+                           if (responseObject[@"icon"] != [NSNull null] && [responseObject[@"icon"] isKindOfClass:[NSString class]]) {
+                               imageLink = [NSString stringWithString:responseObject[@"icon"]];
+                           }
+                           NSURL *imageURL = [NSURL URLWithString:imageLink];
+                           [strongSelf showToastWithTitle:alertTitle description:alertMessage image:nil imageURL:imageURL link:link];
                        }
                    }
                }
@@ -265,28 +274,24 @@ static TMMBeacon* _instance = nil;
      ];
 }
 
-- (void) showToastWithIncreasePoints:(NSNumber*)points  {
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    formatter.maximumFractionDigits = 4;
-    formatter.groupingSeparator = @"";
-    formatter.numberStyle = NSNumberFormatterDecimalStyle;
-    NSString *alertTitle = I18n(@"TBCAlertTitle", "alert title");
-    NSString *alertMessage = [NSString stringWithFormat:I18n(@"TBCAlertMessage", "alert message"), [formatter stringFromNumber:points]];
-    UIImage *alertImage = [UIImage imageNamed:@"Logo" inBundle:TMMSDKBundle compatibleWithTraitCollection:nil];
+- (void) showToastWithTitle:(NSString *)title description:(NSString *)desc image:(UIImage *)image imageURL:(NSURL *)imageURL link:(NSString *) link  {
     __weak __typeof(self) weakSelf = self;
+    if (image == nil && imageURL == nil) {
+        image = [UIImage imageNamed:@"Logo" inBundle:TMMSDKBundle compatibleWithTraitCollection:nil];
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         if (!weakSelf) return;
         __strong typeof(self) strongSelf = weakSelf;
         UIViewController *vc = [strongSelf rootViewController];
-        NSString *link = [NSString stringWithUTF8String:TMMAppLink];
-        [vc.view makeToast: alertMessage
+        [vc.view makeToast: desc
                   duration: strongSelf.toastDuration
                   position: CSToastPositionTop
-                     title: alertTitle
-                     image: alertImage
+                     title: title
+                     image: image
+                  imageURL: imageURL
                      style: nil
                 completion:^(BOOL didTap) {
-                    if (didTap) {
+                    if (didTap && link != nil) {
                         NSURL *url = [NSURL URLWithString:link];
                         [[UIApplication sharedApplication] openURL:url];
                     }

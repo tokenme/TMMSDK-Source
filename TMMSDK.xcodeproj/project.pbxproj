@@ -144,6 +144,8 @@
 		1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
 		1D9515FE210B090900861C3D /* TMMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9515FC210B090900861C3D /* TMMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D95161F210B0A4F00861C3D /* TMMBeacon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DA38ED12173B27F0073DB8A /* UIImageView+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA38ECF2173B27F0073DB8A /* UIImageView+Networking.h */; };
+		1DA38ED22173B27F0073DB8A /* UIImageView+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA38ED02173B27F0073DB8A /* UIImageView+Networking.m */; };
 		1DDB1251211864AE00130C51 /* NSString+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB124F211864AE00130C51 /* NSString+Encryption.h */; };
 		1DDB1252211864AE00130C51 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB1250211864AE00130C51 /* NSString+Encryption.m */; };
 		1DDB12552118657D00130C51 /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB12532118657D00130C51 /* NSString+Base64.h */; };
@@ -271,6 +273,8 @@
 		1D951609210B09A700861C3D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1D95161F210B0A4F00861C3D /* TMMBeacon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMBeacon.h; sourceTree = "<group>"; };
 		1D951620210B0A6B00861C3D /* TMMBeacon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMBeacon.m; sourceTree = "<group>"; };
+		1DA38ECF2173B27F0073DB8A /* UIImageView+Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Networking.h"; sourceTree = "<group>"; };
+		1DA38ED02173B27F0073DB8A /* UIImageView+Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Networking.m"; sourceTree = "<group>"; };
 		1DDB124F211864AE00130C51 /* NSString+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
 		1DDB1250211864AE00130C51 /* NSString+Encryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
 		1DDB12532118657D00130C51 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 				1DDB125C2119501400130C51 /* NSData+Hex.m */,
 				1D0F47A9215DEAFB00385423 /* UIView+Toast.h */,
 				1D0F47AA215DEAFB00385423 /* UIView+Toast.m */,
+				1DA38ECF2173B27F0073DB8A /* UIImageView+Networking.h */,
+				1DA38ED02173B27F0073DB8A /* UIImageView+Networking.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				1D1871A121131942007CFDBB /* JSONHTTPClient.h in Headers */,
 				1DDB125D2119501400130C51 /* NSData+Hex.h in Headers */,
 				1D18719A2113192F007CFDBB /* JSONModelClassProperty.h in Headers */,
+				1DA38ED12173B27F0073DB8A /* UIImageView+Networking.h in Headers */,
 				1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */,
 				1D18718A211318F9007CFDBB /* AFSecurityPolicy.h in Headers */,
 				1D0F47AB215DEAFB00385423 /* UIView+Toast.h in Headers */,
@@ -825,6 +832,7 @@
 				1D18719221131906007CFDBB /* AFHTTPSessionManager.m in Sources */,
 				1D1871772113174F007CFDBB /* TMMHookHelper.m in Sources */,
 				1D18719D2113193E007CFDBB /* JSONHTTPClient.m in Sources */,
+				1DA38ED22173B27F0073DB8A /* UIImageView+Networking.m in Sources */,
 				1D18718521131782007CFDBB /* TMMApi.m in Sources */,
 				1D18719321131906007CFDBB /* AFURLSessionManager.m in Sources */,
 				1D18719121131906007CFDBB /* AFURLResponseSerialization.m in Sources */,

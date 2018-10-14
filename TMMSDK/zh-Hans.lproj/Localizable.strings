@@ -5,6 +5,6 @@
   Created by Syd Xu on 2018/9/26.
   Copyright © 2018 tokenmama.io. All rights reserved.
 */
-"TBCAlertTitle" = "TBC 积分提醒";
-"TBCAlertMessage" = "您刚刚获得 %@ TBC积分，打开 TBC 钱包查看详情。";
+"TBCAlertTitle" = "UCoin 积分提醒";
+"TBCAlertMessage" = "您刚刚获得 %@ UCoin积分，打开 UCoin 钱包查看详情。";
 "TBCAlertCheck" = "查看";

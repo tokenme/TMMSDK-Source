@@ -7,6 +7,7 @@
 //
 
 #import "UIView+Toast.h"
+#import "UIImageView+Networking.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
@@ -59,12 +60,12 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 }
 
 - (void)makeToast:(NSString *)message duration:(NSTimeInterval)duration position:(id)position style:(CSToastStyle *)style {
-    UIView *toast = [self toastViewForMessage:message title:nil image:nil style:style];
+    UIView *toast = [self toastViewForMessage:message title:nil image:nil imageURL:nil style:style];
     [self showToast:toast duration:duration position:position completion:nil];
 }
 
-- (void)makeToast:(NSString *)message duration:(NSTimeInterval)duration position:(id)position title:(NSString *)title image:(UIImage *)image style:(CSToastStyle *)style completion:(void(^)(BOOL didTap))completion {
-    UIView *toast = [self toastViewForMessage:message title:title image:image style:style];
+- (void)makeToast:(NSString *)message duration:(NSTimeInterval)duration position:(id)position title:(NSString *)title image:(UIImage *)image imageURL:(NSURL *)imageURL style:(CSToastStyle *)style completion:(void(^)(BOOL didTap))completion {
+    UIView *toast = [self toastViewForMessage:message title:title image:image imageURL:imageURL style:style];
     [self showToast:toast duration:duration position:position completion:completion];
 }
 
@@ -198,9 +199,9 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 
 #pragma mark - View Construction
 
-- (UIView *)toastViewForMessage:(NSString *)message title:(NSString *)title image:(UIImage *)image style:(CSToastStyle *)style {
+- (UIView *)toastViewForMessage:(NSString *)message title:(NSString *)title image:(UIImage *)image imageURL:(NSURL *)imageURL style:(CSToastStyle *)style {
     // sanity
-    if (message == nil && title == nil && image == nil) return nil;
+    if (message == nil && title == nil && image == nil && imageURL == nil) return nil;
     
     // default to the shared style
     if (style == nil) {
@@ -227,6 +228,13 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     
     if(image != nil) {
         imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.frame = CGRectMake(style.horizontalPadding, style.verticalPadding, style.imageSize.width, style.imageSize.height);
+    }
+    
+    if(imageURL != nil) {
+        imageView = [[UIImageView alloc] init];
+        [imageView setImageURL:imageURL];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.frame = CGRectMake(style.horizontalPadding, style.verticalPadding, style.imageSize.width, style.imageSize.height);
     }
