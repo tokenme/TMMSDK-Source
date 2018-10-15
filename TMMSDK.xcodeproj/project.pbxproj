@@ -37,7 +37,7 @@
 		1D0F47AC215DEAFB00385423 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F47AA215DEAFB00385423 /* UIView+Toast.m */; };
 		1D0F47AD215DF52A00385423 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FF6B6215BD9B2001E69CD /* Localizable.strings */; };
 		1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D15659D210B101000866C0F /* TMMDeviceInfo.h */; };
-		1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A2210B101000866C0F /* MSWeakTimer.h */; };
+		1D1565AB210B101000866C0F /* TMMWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A2210B101000866C0F /* TMMWeakTimer.h */; };
 		1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */; };
 		1D1565B9210B144400866C0F /* UINavigationController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */; };
 		1D1565BB210B14D700866C0F /* UIApplication+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */; };
@@ -53,7 +53,7 @@
 		1D18717E21131766007CFDBB /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
 		1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
 		1D18718121131770007CFDBB /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
-		1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
+		1D18718221131775007CFDBB /* TMMWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* TMMWeakTimer.m */; };
 		1D1871842113177E007CFDBB /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
 		1D18718521131782007CFDBB /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
 		1D18718621131785007CFDBB /* TMMPingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC7A72111682600F91A7B /* TMMPingRequest.m */; };
@@ -105,7 +105,7 @@
 		1D2CC85F2111CBD800F91A7B /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
 		1D2CC8602111CBE000F91A7B /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
 		1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
-		1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* MSWeekTimer.m */; };
+		1D2CC8642111CBFC00F91A7B /* TMMWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* TMMWeakTimer.m */; };
 		1D2CC8662111CC0D00F91A7B /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
 		1D2CC8672111CC1200F91A7B /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
 		1D2CC8682111CC1900F91A7B /* TMMPingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */; };
@@ -191,8 +191,8 @@
 		1D0F47AA215DEAFB00385423 /* UIView+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		1D15659C210B101000866C0F /* TMMDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMDeviceInfo.m; sourceTree = "<group>"; };
 		1D15659D210B101000866C0F /* TMMDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMDeviceInfo.h; sourceTree = "<group>"; };
-		1D1565A2210B101000866C0F /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
-		1D1565A3210B101000866C0F /* MSWeekTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeekTimer.m; sourceTree = "<group>"; };
+		1D1565A2210B101000866C0F /* TMMWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMWeakTimer.h; sourceTree = "<group>"; };
+		1D1565A3210B101000866C0F /* TMMWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMWeakTimer.m; sourceTree = "<group>"; };
 		1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TMMHook.h"; sourceTree = "<group>"; };
 		1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TMMHook.m"; sourceTree = "<group>"; };
 		1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TMMHook.h"; sourceTree = "<group>"; };
@@ -323,13 +323,13 @@
 			path = DeviceInfo;
 			sourceTree = "<group>";
 		};
-		1D1565A1210B101000866C0F /* MSWeekTimer */ = {
+		1D1565A1210B101000866C0F /* TMMWeakTimer */ = {
 			isa = PBXGroup;
 			children = (
-				1D1565A2210B101000866C0F /* MSWeakTimer.h */,
-				1D1565A3210B101000866C0F /* MSWeekTimer.m */,
+				1D1565A2210B101000866C0F /* TMMWeakTimer.h */,
+				1D1565A3210B101000866C0F /* TMMWeakTimer.m */,
 			);
-			path = MSWeekTimer;
+			path = TMMWeakTimer;
 			sourceTree = "<group>";
 		};
 		1D1565AF210B11B900866C0F /* Hooks */ = {
@@ -528,7 +528,7 @@
 				1D2CC79721102B9D00F91A7B /* Extensions */,
 				1D1565AF210B11B900866C0F /* Hooks */,
 				1D15659B210B101000866C0F /* DeviceInfo */,
-				1D1565A1210B101000866C0F /* MSWeekTimer */,
+				1D1565A1210B101000866C0F /* TMMWeakTimer */,
 				1D95161E210B0A4000861C3D /* SDK */,
 			);
 			path = TMMSDK;
@@ -597,7 +597,7 @@
 				1D1565B5210B13C600866C0F /* UIViewController+TMMHook.h in Headers */,
 				1D18718E211318F9007CFDBB /* TMMAFURLResponseSerialization.h in Headers */,
 				1D2CC79C21102BD700F91A7B /* NSString+Hashes.h in Headers */,
-				1D1565AB210B101000866C0F /* MSWeakTimer.h in Headers */,
+				1D1565AB210B101000866C0F /* TMMWeakTimer.h in Headers */,
 				1D18719C2113192F007CFDBB /* TMMJSONModelError.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,7 +763,7 @@
 				1D2CC8692111CC1C00F91A7B /* TMMPingRequest.m in Sources */,
 				1D2CC85B2111CBC100F91A7B /* UIViewController+TMMHook.m in Sources */,
 				1D2CC8672111CC1200F91A7B /* TMMApi.m in Sources */,
-				1D2CC8642111CBFC00F91A7B /* MSWeekTimer.m in Sources */,
+				1D2CC8642111CBFC00F91A7B /* TMMWeakTimer.m in Sources */,
 				1D5F2C4F2112FF2E00499C83 /* TMMJSONHTTPClient.m in Sources */,
 				1D2CC84F2111C8FE00F91A7B /* libTMMSDK.m in Sources */,
 				1D2CC8632111CBF500F91A7B /* TMMDeviceInfo.m in Sources */,
@@ -820,7 +820,7 @@
 				1D18717F21131769007CFDBB /* NSString+Hashes.m in Sources */,
 				1D18719721131919007CFDBB /* TMMJSONModel.m in Sources */,
 				1DDB125A211865BB00130C51 /* NSData+Base64.m in Sources */,
-				1D18718221131775007CFDBB /* MSWeekTimer.m in Sources */,
+				1D18718221131775007CFDBB /* TMMWeakTimer.m in Sources */,
 				1D18717921131756007CFDBB /* UIApplication+TMMHook.m in Sources */,
 				1D18717E21131766007CFDBB /* AppDelegate+TMMHook.m in Sources */,
 				1D18717C21131760007CFDBB /* UIScrollView+TMMHook.m in Sources */,

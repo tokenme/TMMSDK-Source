@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "TMMBeaconDelegate.h"
 #import "TMMBeacon.h"
-#import "MSWeakTimer.h"
+#import "TMMWeakTimer.h"
 #import "TMMHook.h"
 #import "TMMDevice.h"
 #import "TMMPingRequest.h"
@@ -26,10 +26,10 @@ static const char *TMMTimerQueueContext = "TMMTimerQueueContext";
 static const char *TMMNotificationQueueContext = "TMMNotificationQueueContext";
 static const char *TMMTimerQueueName = "io.tokenmama.private_queue";
 static const char *TMMNotificationQueueName = "io.tokenmama.notification_queue";
-static const NSTimeInterval DefaultHeartBeatInterval = 60;
-static const NSTimeInterval DefaultNotificationInterval = 120;
-static const NSTimeInterval DefaultToastDuration = 3.0;
-static const NSUInteger DefaultMaxLogs = 100;
+static const NSTimeInterval TMMDefaultHeartBeatInterval = 60;
+static const NSTimeInterval TMMDefaultNotificationInterval = 120;
+static const NSTimeInterval TMMDefaultToastDuration = 3.0;
+static const NSUInteger TMMDefaultMaxLogs = 100;
 
 @interface TMMBeacon() <TMMBeaconDelegate>
 @property (nonatomic, copy) NSString *appKey;
@@ -38,10 +38,10 @@ static const NSUInteger DefaultMaxLogs = 100;
 @property (nonatomic, assign) NSTimeInterval heartBeatInterval;
 @property (nonatomic, assign) NSTimeInterval notificationInterval;
     
-@property (strong, nonatomic) MSWeakTimer *backgroundTimer;
+@property (strong, nonatomic) TMMWeakTimer *backgroundTimer;
 @property (strong, nonatomic) dispatch_queue_t privateQueue;
     
-@property (strong, nonatomic) MSWeakTimer *notificationTimer;
+@property (strong, nonatomic) TMMWeakTimer *notificationTimer;
 @property (strong, nonatomic) dispatch_queue_t notificationQueue;
     
 @property (strong, nonatomic) TMMHook *hook;
@@ -81,8 +81,8 @@ static TMMBeacon* _instance = nil;
     _instance.device = [[TMMDevice alloc] init];
     _instance.hook = [TMMHook initWithDelegate:_instance];
     _instance.logs = [[NSMutableArray alloc] initWithCapacity:1024];
-    [_instance setHeartBeatInterval: DefaultHeartBeatInterval];
-    [_instance setNotificationInterval: DefaultNotificationInterval];
+    [_instance setHeartBeatInterval: TMMDefaultHeartBeatInterval];
+    [_instance setNotificationInterval: TMMDefaultNotificationInterval];
     _instance.notificationEnabled = YES;
     _instance.toastPosition = [NSString stringWithString: TMMToastPositionTop];
     _instance.toastStyle = [[CSToastStyle alloc] initWithDefaultStyle];
@@ -96,7 +96,7 @@ static TMMBeacon* _instance = nil;
     _instance.toastStyle.imageSize = CGSizeMake(40.0, 40.0);
     [CSToastManager setSharedStyle:_instance.toastStyle];
     [CSToastManager setTapToDismissEnabled:YES];
-    [_instance setToastDuration:DefaultToastDuration];
+    [_instance setToastDuration:TMMDefaultToastDuration];
     [CSToastManager setQueueEnabled:YES];
     return _instance ;
 }
@@ -157,7 +157,7 @@ static TMMBeacon* _instance = nil;
 - (void)startHeartBeat:(NSTimeInterval)time{
     self.privateQueue = dispatch_queue_create(TMMTimerQueueName, DISPATCH_QUEUE_CONCURRENT);
     
-    self.backgroundTimer = [MSWeakTimer scheduledTimerWithTimeInterval:time
+    self.backgroundTimer = [TMMWeakTimer scheduledTimerWithTimeInterval:time
                                                                 target:self
                                                               selector:@selector(heartbeatSend)
                                                               userInfo:nil
@@ -170,7 +170,7 @@ static TMMBeacon* _instance = nil;
 - (void)startNotification:(NSTimeInterval)time{
     self.notificationQueue = dispatch_queue_create(TMMNotificationQueueName, DISPATCH_QUEUE_CONCURRENT);
     
-    self.notificationTimer = [MSWeakTimer scheduledTimerWithTimeInterval:time
+    self.notificationTimer = [TMMWeakTimer scheduledTimerWithTimeInterval:time
                                                                 target:self
                                                               selector:@selector(getDevicePoints)
                                                               userInfo:nil
@@ -315,7 +315,7 @@ static TMMBeacon* _instance = nil;
     _duration += interval;
     
     [_logs addObject:info.userInfo];
-    if ([_logs count] >= DefaultMaxLogs) {
+    if ([_logs count] >= TMMDefaultMaxLogs) {
         [_logs removeObjectAtIndex:0];
     }
     //NSLog(@"logs:%@", _logs);

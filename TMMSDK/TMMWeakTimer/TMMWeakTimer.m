@@ -1,5 +1,5 @@
 //
-//  MSWeekTimer.m
+//  TMMWeakTimer.m
 //  TMM-SDK
 //
 //  Created by Syd on 2018/7/27.
@@ -7,24 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MSWeakTimer.h"
+#import "TMMWeakTimer.h"
 
 #import <libkern/OSAtomic.h>
 // #import <stdatomic.h>
 
 #if !__has_feature(objc_arc)
-#error MSWeakTimer is ARC only. Either turn on ARC for the project or use -fobjc-arc flag
+#error TMMWeakTimer is ARC only. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
 
 #if OS_OBJECT_USE_OBJC
-#define ms_gcd_property_qualifier strong
-#define ms_release_gcd_object(object)
+#define tmm_gcd_property_qualifier strong
+#define tmm_release_gcd_object(object)
 #else
-#define ms_gcd_property_qualifier assign
-#define ms_release_gcd_object(object) dispatch_release(object)
+#define tmm_gcd_property_qualifier assign
+#define tmm_release_gcd_object(object) dispatch_release(object)
 #endif
 
-@interface MSWeakTimer ()
+@interface TMMWeakTimer ()
     {
         struct
         {
@@ -39,13 +39,13 @@
     @property (nonatomic, strong) id userInfo;
     @property (nonatomic, assign) BOOL repeats;
     
-    @property (nonatomic, ms_gcd_property_qualifier) dispatch_queue_t privateSerialQueue;
+    @property (nonatomic, tmm_gcd_property_qualifier) dispatch_queue_t privateSerialQueue;
     
-    @property (nonatomic, ms_gcd_property_qualifier) dispatch_source_t timer;
+    @property (nonatomic, tmm_gcd_property_qualifier) dispatch_source_t timer;
     
     @end
 
-@implementation MSWeakTimer
+@implementation TMMWeakTimer
     
     @synthesize tolerance = _tolerance;
     
@@ -68,7 +68,7 @@
             self.userInfo = userInfo;
             self.repeats = repeats;
             
-            NSString *privateQueueName = [NSString stringWithFormat:@"com.mindsnacks.msweaktimer.%p", self];
+            NSString *privateQueueName = [NSString stringWithFormat:@"io.tokenmama.tmmweaktimer.%p", self];
             self.privateSerialQueue = dispatch_queue_create([privateQueueName cStringUsingEncoding:NSASCIIStringEncoding], DISPATCH_QUEUE_SERIAL);
             dispatch_set_target_queue(self.privateSerialQueue, dispatchQueue);
             
@@ -98,7 +98,7 @@
                                        repeats:(BOOL)repeats
                                  dispatchQueue:(dispatch_queue_t)dispatchQueue
     {
-        MSWeakTimer *timer = [[self alloc] initWithTimeInterval:timeInterval
+        TMMWeakTimer *timer = [[self alloc] initWithTimeInterval:timeInterval
                                                          target:target
                                                        selector:selector
                                                        userInfo:userInfo
@@ -114,7 +114,7 @@
     {
         [self invalidate];
         
-        ms_release_gcd_object(_privateSerialQueue);
+        tmm_release_gcd_object(_privateSerialQueue);
     }
     
 - (NSString *)description
@@ -169,7 +169,7 @@
     {
         [self resetTimerProperties];
         
-        __weak MSWeakTimer *weakSelf = self;
+        __weak TMMWeakTimer *weakSelf = self;
         
         dispatch_source_set_event_handler(self.timer, ^{
             [weakSelf timerFired];
@@ -192,7 +192,7 @@
             dispatch_source_t timer = self.timer;
             dispatch_async(self.privateSerialQueue, ^{
                 dispatch_source_cancel(timer);
-                ms_release_gcd_object(timer);
+                tmm_release_gcd_object(timer);
             });
         }
     }

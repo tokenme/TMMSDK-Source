@@ -11,8 +11,8 @@
 #import "TMMApi.h"
 #import "NSString+Hashes.h"
 
-NSString * const kAPI_VERSION = @"1";
-NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io";
+NSString * const kTMM_API_VERSION = @"1";
+NSString * const kTMM_API_GATEWAY = @"https://tmm.tokenmama.io";
 
 @implementation TMMApi
 
@@ -27,7 +27,7 @@ NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io";
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     parameters[@"k"] = apiKey; // app_key
-    parameters[@"v"] = kAPI_VERSION; // api version
+    parameters[@"v"] = kTMM_API_VERSION; // api version
     parameters[@"t"] = [NSNumber numberWithInteger:round(ts)]; // timestamp
     parameters[@"r"] = [TMMApi randomAlphanumericStringWithLength:40]; // random string key
     parameters[@"p"] = payload; // data
@@ -36,7 +36,7 @@ NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io";
     
     //[kApplication setNetworkActivityIndicatorVisible:YES];
     TMMAFHTTPSessionManager *session = [TMMAFHTTPSessionManager manager];
-    [session POST:[@[kAPI_GATEWAY, method] componentsJoinedByString:@"/"]
+    [session POST:[@[kTMM_API_GATEWAY, method] componentsJoinedByString:@"/"]
        parameters:[parameters copy]
          progress:nil
           success:^(NSURLSessionDataTask *task, id responseObject) {
