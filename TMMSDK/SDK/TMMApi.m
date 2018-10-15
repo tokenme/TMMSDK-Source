@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+#import "TMMAFNetworking.h"
 #import "TMMApi.h"
 #import "NSString+Hashes.h"
 
@@ -35,7 +35,7 @@ NSString * const kAPI_GATEWAY = @"https://tmm.tokenmama.io";
     
     
     //[kApplication setNetworkActivityIndicatorVisible:YES];
-    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    TMMAFHTTPSessionManager *session = [TMMAFHTTPSessionManager manager];
     [session POST:[@[kAPI_GATEWAY, method] componentsJoinedByString:@"/"]
        parameters:[parameters copy]
          progress:nil

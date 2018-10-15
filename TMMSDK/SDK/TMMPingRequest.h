@@ -8,11 +8,11 @@
 
 #ifndef TMMPingRequest_h
 #define TMMPingRequest_h
-#import "JSONModelLib.h"
+#import "TMMJSONModelLib.h"
 
 @class TMMDevice;
 
-@interface TMMPingRequest: JSONModel
+@interface TMMPingRequest: TMMJSONModel
 @property(nonatomic,strong) NSString* logs;
 @property(nonatomic,assign) NSUInteger duration;
 @property(nonatomic,strong) TMMDevice* device;

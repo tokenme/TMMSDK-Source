@@ -20,7 +20,7 @@
 #import <AdSupport/AdSupport.h>
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
-#import "UICKeyChainStore.h"
+#import "TMMKeyChainStore.h"
 
 #define kIsStringValid(text) (text && text!=NULL && text.length>0)
 NSString * const IDFA_SERVICE = @"io.tokenmama.sdk.idfa";
@@ -790,7 +790,7 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
 }
     
 + (void)deleteIDFA {
-    [UICKeyChainStore removeItemForKey:IDFA_KEY service:IDFA_SERVICE];
+    [TMMKeyChainStore removeItemForKey:IDFA_KEY service:IDFA_SERVICE];
 }
     
 + (NSString*)IDFA {
@@ -819,7 +819,7 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
 
 #pragma mark - Keychain
 + (NSString*)getIdfaString {
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:IDFA_SERVICE];
+    TMMKeyChainStore *keychain = [TMMKeyChainStore keyChainStoreWithService:IDFA_SERVICE];
     NSString *idfaStr = [keychain stringForKey:IDFA_KEY];
     if (kIsStringValid(idfaStr)) {
         return idfaStr;
@@ -830,7 +830,7 @@ NSString * const IDFA_KEY = @"io.tokenmama.sdk.idfa.key";
     
 + (BOOL)setIdfaString:(NSString *)secValue {
     if (kIsStringValid(secValue)) {
-        UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:IDFA_SERVICE];
+        TMMKeyChainStore *keychain = [TMMKeyChainStore keyChainStoreWithService:IDFA_SERVICE];
         [keychain setString:secValue forKey:IDFA_KEY];
         keychain.synchronizable = YES;
         return YES;

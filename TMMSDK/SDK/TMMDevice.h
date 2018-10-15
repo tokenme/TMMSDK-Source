@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModelLib.h"
+#import "TMMJSONModelLib.h"
 
-@interface TMMDevice: JSONModel
+@interface TMMDevice: TMMJSONModel
 
 @property(nonatomic,assign) BOOL isEmulator;
 @property(nonatomic,assign) BOOL isTablet;
