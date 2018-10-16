@@ -117,7 +117,7 @@
 		1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
 		1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */; };
 		1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */; };
-		1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36165D210F23C7003CD5A6 /* TMMDevice.h */; };
+		1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36165D210F23C7003CD5A6 /* TMMDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D482311210B1FE5007D2AB1 /* UIWebView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */; };
 		1D5F2C292112FED800499C83 /* TMMAFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C152112FED800499C83 /* TMMAFURLResponseSerialization.m */; };
 		1D5F2C2A2112FED800499C83 /* TMMAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C162112FED800499C83 /* TMMAFHTTPSessionManager.m */; };

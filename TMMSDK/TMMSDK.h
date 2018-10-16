@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char TMMSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <TMMSDK/PublicHeader.h>
 
 #import <TMMSDK/TMMBeacon.h>
+#import <TMMSDK/TMMDevice.h>
