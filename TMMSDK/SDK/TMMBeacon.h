@@ -13,8 +13,6 @@ extern const NSString * TMMToastPositionTop;
 extern const NSString * TMMToastPositionCenter;
 extern const NSString * TMMToastPositionBottom;
 
-@class TMMDevice;
-
 @interface TMMBeacon: NSObject
     
 +(instancetype) shareInstance;
@@ -29,7 +27,7 @@ extern const NSString * TMMToastPositionBottom;
 - (void) setToastDuration:(NSTimeInterval)duration;
 - (void) setNotificationInterval:(NSTimeInterval)notificationInterval;
 - (void) debugToast;
-- (TMMDevice *) deviceInfo;
+- (NSDictionary *) deviceInfo;
 - (NSString *) deviceId;
 @end
 

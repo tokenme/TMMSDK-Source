@@ -146,8 +146,8 @@ static TMMBeacon* _instance = nil;
     return self.device.idfa;
 }
 
-- (TMMDevice *) deviceInfo {
-    return self.device;
+- (NSDictionary *) deviceInfo {
+    return [self.device toDictionary];
 }
 
 - (void) setHeartBeatInterval:(NSTimeInterval)heartBeatInterval {
