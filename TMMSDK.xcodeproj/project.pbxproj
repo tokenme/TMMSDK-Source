@@ -115,6 +115,92 @@
 		1D2CC86F2111CC5D00F91A7B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
 		1D2CC8702111CC5F00F91A7B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
 		1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDF8210F29940000A208 /* AdSupport.framework */; };
+		1D31FBEB2175EB710014712B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31FBEA2175EB710014712B /* AppDelegate.m */; };
+		1D31FBEE2175EB720014712B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31FBED2175EB720014712B /* ViewController.m */; };
+		1D31FBF12175EB720014712B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D31FBEF2175EB720014712B /* Main.storyboard */; };
+		1D31FBF32175EB730014712B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D31FBF22175EB730014712B /* Assets.xcassets */; };
+		1D31FBF62175EB730014712B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D31FBF42175EB730014712B /* LaunchScreen.storyboard */; };
+		1D31FBF92175EB730014712B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31FBF82175EB730014712B /* main.m */; };
+		1D31FBFE2175EC270014712B /* TMMBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D95161F210B0A4F00861C3D /* TMMBeacon.h */; };
+		1D31FC072175F0E90014712B /* TMMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D951620210B0A6B00861C3D /* TMMBeacon.m */; };
+		1D31FC082175F0EC0014712B /* TMMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79F21102CE500F91A7B /* TMMApi.m */; };
+		1D31FC092175F0EF0014712B /* TMMPingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC7A72111682600F91A7B /* TMMPingRequest.m */; };
+		1D31FC0A2175F0F30014712B /* TMMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36165E210F23C7003CD5A6 /* TMMDevice.m */; };
+		1D31FC0B2175F0F80014712B /* TMMWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565A3210B101000866C0F /* TMMWeakTimer.m */; };
+		1D31FC0C2175F0FD0014712B /* TMMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D15659C210B101000866C0F /* TMMDeviceInfo.m */; };
+		1D31FC0E2175F1340014712B /* TMMBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D95161F210B0A4F00861C3D /* TMMBeacon.h */; };
+		1D31FC0F2175F1390014712B /* TMMApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC79E21102CA600F91A7B /* TMMApi.h */; };
+		1D31FC102175F13C0014712B /* TMMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9515FC210B090900861C3D /* TMMSDK.h */; };
+		1D31FC112175F1400014712B /* TMMPingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC7A6211167CA00F91A7B /* TMMPingRequest.h */; };
+		1D31FC122175F1440014712B /* TMMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36165D210F23C7003CD5A6 /* TMMDevice.h */; };
+		1D31FC132175F1460014712B /* TMMBeaconDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361655210F14CB003CD5A6 /* TMMBeaconDelegate.h */; };
+		1D31FC142175F1770014712B /* TMMKeyChainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C212112FED800499C83 /* TMMKeyChainStore.h */; };
+		1D31FC152175F18B0014712B /* TMMDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D15659D210B101000866C0F /* TMMDeviceInfo.h */; };
+		1D31FC162175F1B20014712B /* TMMJSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C422112FF2E00499C83 /* TMMJSONModelLib.h */; };
+		1D31FC172175F1FF0014712B /* UIView+Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0F47A9215DEAFB00385423 /* UIView+Toast.h */; };
+		1D31FC192175F2260014712B /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F47AA215DEAFB00385423 /* UIView+Toast.m */; };
+		1D31FC1A2175F22E0014712B /* TMMJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C3D2112FF2E00499C83 /* TMMJSONModel.h */; };
+		1D31FC1B2175F2320014712B /* TMMJSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C3F2112FF2E00499C83 /* TMMJSONModelError.h */; };
+		1D31FC1C2175F2350014712B /* TMMJSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3E2112FF2E00499C83 /* TMMJSONModelClassProperty.m */; };
+		1D31FC1D2175F23A0014712B /* TMMJSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C3C2112FF2E00499C83 /* TMMJSONModelClassProperty.h */; };
+		1D31FC1E2175F23D0014712B /* TMMJSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3B2112FF2E00499C83 /* TMMJSONModelError.m */; };
+		1D31FC1F2175F2400014712B /* TMMJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C3A2112FF2E00499C83 /* TMMJSONModel.m */; };
+		1D31FC202175F2520014712B /* TMMJSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C352112FF2E00499C83 /* TMMJSONValueTransformer.m */; };
+		1D31FC212175F2590014712B /* TMMJSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C372112FF2E00499C83 /* TMMJSONValueTransformer.h */; };
+		1D31FC222175F2590014712B /* TMMJSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C382112FF2E00499C83 /* TMMJSONKeyMapper.m */; };
+		1D31FC232175F25E0014712B /* TMMJSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C362112FF2E00499C83 /* TMMJSONKeyMapper.h */; };
+		1D31FC242175F2710014712B /* TMMJSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C442112FF2E00499C83 /* TMMJSONHTTPClient.m */; };
+		1D31FC252175F2710014712B /* TMMJSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C452112FF2E00499C83 /* TMMJSONAPI.m */; };
+		1D31FC262175F2710014712B /* TMMJSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C462112FF2E00499C83 /* TMMJSONModel+networking.h */; };
+		1D31FC272175F2710014712B /* TMMJSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C472112FF2E00499C83 /* TMMJSONHTTPClient.h */; };
+		1D31FC282175F2710014712B /* TMMJSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C482112FF2E00499C83 /* TMMJSONAPI.h */; };
+		1D31FC292175F2710014712B /* TMMJSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C492112FF2E00499C83 /* TMMJSONModel+networking.m */; };
+		1D31FC2A2175F2780014712B /* TMMKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C202112FED800499C83 /* TMMKeyChainStore.m */; };
+		1D31FC2B2175F28B0014712B /* TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361650210F0045003CD5A6 /* TMMHook.h */; };
+		1D31FC2C2175F28B0014712B /* TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164E210F000E003CD5A6 /* TMMHook.m */; };
+		1D31FC2D2175F28B0014712B /* TMMHookHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361652210F0359003CD5A6 /* TMMHookHelper.h */; };
+		1D31FC2E2175F28B0014712B /* TMMHookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361653210F0372003CD5A6 /* TMMHookHelper.m */; };
+		1D31FC2F2175F28B0014712B /* UIWebView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D48230F210B1FE5007D2AB1 /* UIWebView+TMMHook.h */; };
+		1D31FC302175F28B0014712B /* UIWebView+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D482310210B1FE5007D2AB1 /* UIWebView+TMMHook.m */; };
+		1D31FC312175F28B0014712B /* UIApplication+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B0210B120500866C0F /* UIApplication+TMMHook.h */; };
+		1D31FC322175F28B0014712B /* UIApplication+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B1210B122B00866C0F /* UIApplication+TMMHook.m */; };
+		1D31FC332175F28B0014712B /* UIViewController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B3210B13C600866C0F /* UIViewController+TMMHook.h */; };
+		1D31FC342175F28B0014712B /* UIViewController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B4210B13C600866C0F /* UIViewController+TMMHook.m */; };
+		1D31FC352175F28B0014712B /* UINavigationController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565B7210B144400866C0F /* UINavigationController+TMMHook.h */; };
+		1D31FC362175F28B0014712B /* UINavigationController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565B8210B144400866C0F /* UINavigationController+TMMHook.m */; };
+		1D31FC372175F28B0014712B /* UIScrollView+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565BC210B16EC00866C0F /* UIScrollView+TMMHook.h */; };
+		1D31FC382175F28B0014712B /* UIScrollView+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1565BD210B16EC00866C0F /* UIScrollView+TMMHook.m */; };
+		1D31FC392175F28B0014712B /* UITabBarController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */; };
+		1D31FC3A2175F28B0014712B /* UITabBarController+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D361658210F197D003CD5A6 /* UITabBarController+TMMHook.m */; };
+		1D31FC3B2175F28B0014712B /* AppDelegate+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */; };
+		1D31FC3C2175F28B0014712B /* AppDelegate+TMMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */; };
+		1D31FC3D2175F2910014712B /* NSString+Hashes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2CC79A21102BD700F91A7B /* NSString+Hashes.h */; };
+		1D31FC3E2175F2910014712B /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CC79B21102BD700F91A7B /* NSString+Hashes.m */; };
+		1D31FC3F2175F2910014712B /* NSString+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB124F211864AE00130C51 /* NSString+Encryption.h */; };
+		1D31FC402175F2910014712B /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB1250211864AE00130C51 /* NSString+Encryption.m */; };
+		1D31FC412175F2910014712B /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB12532118657D00130C51 /* NSString+Base64.h */; };
+		1D31FC422175F2910014712B /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB12542118657D00130C51 /* NSString+Base64.m */; };
+		1D31FC432175F2910014712B /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB1257211865BB00130C51 /* NSData+Base64.h */; };
+		1D31FC442175F2910014712B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB1258211865BB00130C51 /* NSData+Base64.m */; };
+		1D31FC452175F2910014712B /* NSData+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB125B2119501400130C51 /* NSData+Hex.h */; };
+		1D31FC462175F2910014712B /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB125C2119501400130C51 /* NSData+Hex.m */; };
+		1D31FC472175F2910014712B /* UIImageView+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA38ECF2173B27F0073DB8A /* UIImageView+Networking.h */; };
+		1D31FC482175F2910014712B /* UIImageView+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA38ED02173B27F0073DB8A /* UIImageView+Networking.m */; };
+		1D31FC492175F2970014712B /* TMMWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1565A2210B101000866C0F /* TMMWeakTimer.h */; };
+		1D31FC4A2175F2A40014712B /* TMMAFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C112112FED800499C83 /* TMMAFSecurityPolicy.h */; };
+		1D31FC4B2175F2A40014712B /* TMMAFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C122112FED800499C83 /* TMMAFNetworkReachabilityManager.h */; };
+		1D31FC4C2175F2A40014712B /* TMMAFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C132112FED800499C83 /* TMMAFURLSessionManager.h */; };
+		1D31FC4D2175F2A40014712B /* TMMAFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C142112FED800499C83 /* TMMAFURLRequestSerialization.h */; };
+		1D31FC4E2175F2A40014712B /* TMMAFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C152112FED800499C83 /* TMMAFURLResponseSerialization.m */; };
+		1D31FC4F2175F2A40014712B /* TMMAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C162112FED800499C83 /* TMMAFHTTPSessionManager.m */; };
+		1D31FC502175F2A40014712B /* TMMAFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C172112FED800499C83 /* TMMAFURLResponseSerialization.h */; };
+		1D31FC512175F2A40014712B /* TMMAFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C182112FED800499C83 /* TMMAFURLSessionManager.m */; };
+		1D31FC522175F2A40014712B /* TMMAFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C192112FED800499C83 /* TMMAFURLRequestSerialization.m */; };
+		1D31FC532175F2A40014712B /* TMMAFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C1A2112FED800499C83 /* TMMAFNetworking.h */; };
+		1D31FC542175F2A40014712B /* TMMAFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C1B2112FED800499C83 /* TMMAFNetworkReachabilityManager.m */; };
+		1D31FC552175F2A40014712B /* TMMAFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F2C1C2112FED800499C83 /* TMMAFSecurityPolicy.m */; };
+		1D31FC562175F2A40014712B /* TMMAFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C1D2112FED800499C83 /* TMMAFCompatibilityMacros.h */; };
+		1D31FC572175F2A40014712B /* TMMAFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F2C1E2112FED800499C83 /* TMMAFHTTPSessionManager.h */; };
 		1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */; };
 		1D361659210F197D003CD5A6 /* UITabBarController+TMMHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D361657210F197D003CD5A6 /* UITabBarController+TMMHook.h */; };
 		1D36165F210F23C7003CD5A6 /* TMMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D36165D210F23C7003CD5A6 /* TMMDevice.h */; };
@@ -143,7 +229,6 @@
 		1D7CBDFB210F29A00000A208 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFA210F29A00000A208 /* CoreTelephony.framework */; };
 		1D7CBDFD210F29CA0000A208 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CBDFC210F29CA0000A208 /* Security.framework */; };
 		1D9515FE210B090900861C3D /* TMMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9515FC210B090900861C3D /* TMMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D95161F210B0A4F00861C3D /* TMMBeacon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DA38ED12173B27F0073DB8A /* UIImageView+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA38ECF2173B27F0073DB8A /* UIImageView+Networking.h */; };
 		1DA38ED22173B27F0073DB8A /* UIImageView+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA38ED02173B27F0073DB8A /* UIImageView+Networking.m */; };
 		1DDB1251211864AE00130C51 /* NSString+Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB124F211864AE00130C51 /* NSString+Encryption.h */; };
@@ -211,6 +296,16 @@
 		1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibTMMSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2CC84D2111C8FE00F91A7B /* libTMMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libTMMSDK.h; sourceTree = "<group>"; };
 		1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libTMMSDK.m; sourceTree = "<group>"; };
+		1D31FBE72175EB710014712B /* TMMSDK-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMMSDK-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D31FBE92175EB710014712B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D31FBEA2175EB710014712B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D31FBEC2175EB710014712B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1D31FBED2175EB720014712B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1D31FBF02175EB720014712B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D31FBF22175EB730014712B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D31FBF52175EB730014712B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D31FBF72175EB730014712B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D31FBF82175EB730014712B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D36164A210B23A8003CD5A6 /* AppDelegate+TMMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+TMMHook.h"; sourceTree = "<group>"; };
 		1D36164B210B23A8003CD5A6 /* AppDelegate+TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+TMMHook.m"; sourceTree = "<group>"; };
 		1D36164E210F000E003CD5A6 /* TMMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMHook.m; sourceTree = "<group>"; };
@@ -291,6 +386,13 @@
 				1D2CC8702111CC5F00F91A7B /* CoreTelephony.framework in Frameworks */,
 				1D2CC86F2111CC5D00F91A7B /* Security.framework in Frameworks */,
 				1D2CC8712111CC6200F91A7B /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D31FBE42175EB710014712B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +487,22 @@
 				1D2CC84E2111C8FE00F91A7B /* libTMMSDK.m */,
 			);
 			path = libTMMSDK;
+			sourceTree = "<group>";
+		};
+		1D31FBE82175EB710014712B /* TMMSDK-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1D31FBE92175EB710014712B /* AppDelegate.h */,
+				1D31FBEA2175EB710014712B /* AppDelegate.m */,
+				1D31FBEC2175EB710014712B /* ViewController.h */,
+				1D31FBED2175EB720014712B /* ViewController.m */,
+				1D31FBEF2175EB720014712B /* Main.storyboard */,
+				1D31FBF22175EB730014712B /* Assets.xcassets */,
+				1D31FBF42175EB730014712B /* LaunchScreen.storyboard */,
+				1D31FBF72175EB730014712B /* Info.plist */,
+				1D31FBF82175EB730014712B /* main.m */,
+			);
+			path = "TMMSDK-Demo";
 			sourceTree = "<group>";
 		};
 		1D5F2C0F2112FED800499C83 /* Dependencies */ = {
@@ -500,6 +618,7 @@
 				1D9515FB210B090900861C3D /* TMMSDK */,
 				1D2CC84C2111C8FE00F91A7B /* libTMMSDK */,
 				1D5FF696215BB379001E69CD /* TMMSDKBundle */,
+				1D31FBE82175EB710014712B /* TMMSDK-Demo */,
 				1D9515FA210B090900861C3D /* Products */,
 				1D5F2C0F2112FED800499C83 /* Dependencies */,
 				1D7CBDF7210F29940000A208 /* Frameworks */,
@@ -512,6 +631,7 @@
 				1D9515F9210B090900861C3D /* TMMSDK.framework */,
 				1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */,
 				1D5FF695215BB379001E69CD /* TMMSDKBundle.bundle */,
+				1D31FBE72175EB710014712B /* TMMSDK-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -553,6 +673,55 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1D31FC0D2175F1290014712B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D31FC2D2175F28B0014712B /* TMMHookHelper.h in Headers */,
+				1D31FC1B2175F2320014712B /* TMMJSONModelError.h in Headers */,
+				1D31FC392175F28B0014712B /* UITabBarController+TMMHook.h in Headers */,
+				1D31FC572175F2A40014712B /* TMMAFHTTPSessionManager.h in Headers */,
+				1D31FC432175F2910014712B /* NSData+Base64.h in Headers */,
+				1D31FC4C2175F2A40014712B /* TMMAFURLSessionManager.h in Headers */,
+				1D31FC142175F1770014712B /* TMMKeyChainStore.h in Headers */,
+				1D31FC132175F1460014712B /* TMMBeaconDelegate.h in Headers */,
+				1D31FC372175F28B0014712B /* UIScrollView+TMMHook.h in Headers */,
+				1D31FC272175F2710014712B /* TMMJSONHTTPClient.h in Headers */,
+				1D31FC282175F2710014712B /* TMMJSONAPI.h in Headers */,
+				1D31FC492175F2970014712B /* TMMWeakTimer.h in Headers */,
+				1D31FC472175F2910014712B /* UIImageView+Networking.h in Headers */,
+				1D31FC532175F2A40014712B /* TMMAFNetworking.h in Headers */,
+				1D31FC232175F25E0014712B /* TMMJSONKeyMapper.h in Headers */,
+				1D31FC502175F2A40014712B /* TMMAFURLResponseSerialization.h in Headers */,
+				1D31FC412175F2910014712B /* NSString+Base64.h in Headers */,
+				1D31FC212175F2590014712B /* TMMJSONValueTransformer.h in Headers */,
+				1D31FC102175F13C0014712B /* TMMSDK.h in Headers */,
+				1D31FC452175F2910014712B /* NSData+Hex.h in Headers */,
+				1D31FC172175F1FF0014712B /* UIView+Toast.h in Headers */,
+				1D31FC2B2175F28B0014712B /* TMMHook.h in Headers */,
+				1D31FC0F2175F1390014712B /* TMMApi.h in Headers */,
+				1D31FC162175F1B20014712B /* TMMJSONModelLib.h in Headers */,
+				1D31FC312175F28B0014712B /* UIApplication+TMMHook.h in Headers */,
+				1D31FC2F2175F28B0014712B /* UIWebView+TMMHook.h in Headers */,
+				1D31FC122175F1440014712B /* TMMDevice.h in Headers */,
+				1D31FC3D2175F2910014712B /* NSString+Hashes.h in Headers */,
+				1D31FC3F2175F2910014712B /* NSString+Encryption.h in Headers */,
+				1D31FC0E2175F1340014712B /* TMMBeacon.h in Headers */,
+				1D31FC262175F2710014712B /* TMMJSONModel+networking.h in Headers */,
+				1D31FC112175F1400014712B /* TMMPingRequest.h in Headers */,
+				1D31FC4D2175F2A40014712B /* TMMAFURLRequestSerialization.h in Headers */,
+				1D31FC562175F2A40014712B /* TMMAFCompatibilityMacros.h in Headers */,
+				1D31FC332175F28B0014712B /* UIViewController+TMMHook.h in Headers */,
+				1D31FC3B2175F28B0014712B /* AppDelegate+TMMHook.h in Headers */,
+				1D31FC4A2175F2A40014712B /* TMMAFSecurityPolicy.h in Headers */,
+				1D31FC352175F28B0014712B /* UINavigationController+TMMHook.h in Headers */,
+				1D31FC1A2175F22E0014712B /* TMMJSONModel.h in Headers */,
+				1D31FC152175F18B0014712B /* TMMDeviceInfo.h in Headers */,
+				1D31FC4B2175F2A40014712B /* TMMAFNetworkReachabilityManager.h in Headers */,
+				1D31FC1D2175F23A0014712B /* TMMJSONModelClassProperty.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D9515F6210B090900861C3D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,12 +733,12 @@
 				1D482311210B1FE5007D2AB1 /* UIWebView+TMMHook.h in Headers */,
 				1D36164C210B23A8003CD5A6 /* AppDelegate+TMMHook.h in Headers */,
 				1D5F2C562112FFBA00499C83 /* TMMAFNetworking.h in Headers */,
+				1D31FBFE2175EC270014712B /* TMMBeacon.h in Headers */,
 				1D5F2C572112FFC800499C83 /* TMMKeyChainStore.h in Headers */,
 				1D2CC86B2111CC2500F91A7B /* TMMBeaconDelegate.h in Headers */,
 				1D1565A8210B101000866C0F /* TMMDeviceInfo.h in Headers */,
 				1D2CC8552111CB6300F91A7B /* TMMHook.h in Headers */,
 				1D1871A221131942007CFDBB /* TMMJSONAPI.h in Headers */,
-				1D951622210B0B2600861C3D /* TMMBeacon.h in Headers */,
 				1D2CC8572111CB9B00F91A7B /* TMMHookHelper.h in Headers */,
 				1D18719B2113192F007CFDBB /* TMMJSONModel.h in Headers */,
 				1D18718F211318F9007CFDBB /* TMMAFCompatibilityMacros.h in Headers */,
@@ -622,6 +791,24 @@
 			productReference = 1D2CC84B2111C8FE00F91A7B /* liblibTMMSDK.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		1D31FBE62175EB710014712B /* TMMSDK-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D31FBFC2175EB730014712B /* Build configuration list for PBXNativeTarget "TMMSDK-Demo" */;
+			buildPhases = (
+				1D31FBE32175EB710014712B /* Sources */,
+				1D31FBE42175EB710014712B /* Frameworks */,
+				1D31FC0D2175F1290014712B /* Headers */,
+				1D31FBE52175EB710014712B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TMMSDK-Demo";
+			productName = "TMMSDK-Demo";
+			productReference = 1D31FBE72175EB710014712B /* TMMSDK-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1D5FF694215BB379001E69CD /* TMMSDKBundle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D5FF698215BB379001E69CD /* Build configuration list for PBXNativeTarget "TMMSDKBundle" */;
@@ -673,6 +860,9 @@
 					1D2CC8732111D16100F91A7B = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					1D31FBE62175EB710014712B = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					1D5FF694215BB379001E69CD = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -691,6 +881,7 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
+				Base,
 			);
 			mainGroup = 1D9515EF210B090900861C3D;
 			productRefGroup = 1D9515FA210B090900861C3D /* Products */;
@@ -702,11 +893,22 @@
 				1D2CC84A2111C8FE00F91A7B /* libTMMSDK */,
 				1D2CC8732111D16100F91A7B /* libTMMSDKMaker */,
 				1D5FF694215BB379001E69CD /* TMMSDKBundle */,
+				1D31FBE62175EB710014712B /* TMMSDK-Demo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D31FBE52175EB710014712B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D31FBF62175EB730014712B /* LaunchScreen.storyboard in Resources */,
+				1D31FBF32175EB730014712B /* Assets.xcassets in Resources */,
+				1D31FBF12175EB720014712B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D5FF693215BB379001E69CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -795,6 +997,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D31FBE32175EB710014712B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D31FC252175F2710014712B /* TMMJSONAPI.m in Sources */,
+				1D31FC0C2175F0FD0014712B /* TMMDeviceInfo.m in Sources */,
+				1D31FC3C2175F28B0014712B /* AppDelegate+TMMHook.m in Sources */,
+				1D31FC0B2175F0F80014712B /* TMMWeakTimer.m in Sources */,
+				1D31FC2A2175F2780014712B /* TMMKeyChainStore.m in Sources */,
+				1D31FC552175F2A40014712B /* TMMAFSecurityPolicy.m in Sources */,
+				1D31FC092175F0EF0014712B /* TMMPingRequest.m in Sources */,
+				1D31FC462175F2910014712B /* NSData+Hex.m in Sources */,
+				1D31FC292175F2710014712B /* TMMJSONModel+networking.m in Sources */,
+				1D31FC1F2175F2400014712B /* TMMJSONModel.m in Sources */,
+				1D31FC202175F2520014712B /* TMMJSONValueTransformer.m in Sources */,
+				1D31FC242175F2710014712B /* TMMJSONHTTPClient.m in Sources */,
+				1D31FC1C2175F2350014712B /* TMMJSONModelClassProperty.m in Sources */,
+				1D31FC3E2175F2910014712B /* NSString+Hashes.m in Sources */,
+				1D31FC072175F0E90014712B /* TMMBeacon.m in Sources */,
+				1D31FC422175F2910014712B /* NSString+Base64.m in Sources */,
+				1D31FC2C2175F28B0014712B /* TMMHook.m in Sources */,
+				1D31FC342175F28B0014712B /* UIViewController+TMMHook.m in Sources */,
+				1D31FBEE2175EB720014712B /* ViewController.m in Sources */,
+				1D31FC402175F2910014712B /* NSString+Encryption.m in Sources */,
+				1D31FC4E2175F2A40014712B /* TMMAFURLResponseSerialization.m in Sources */,
+				1D31FC302175F28B0014712B /* UIWebView+TMMHook.m in Sources */,
+				1D31FBF92175EB730014712B /* main.m in Sources */,
+				1D31FC512175F2A40014712B /* TMMAFURLSessionManager.m in Sources */,
+				1D31FC082175F0EC0014712B /* TMMApi.m in Sources */,
+				1D31FC442175F2910014712B /* NSData+Base64.m in Sources */,
+				1D31FC4F2175F2A40014712B /* TMMAFHTTPSessionManager.m in Sources */,
+				1D31FBEB2175EB710014712B /* AppDelegate.m in Sources */,
+				1D31FC1E2175F23D0014712B /* TMMJSONModelError.m in Sources */,
+				1D31FC542175F2A40014712B /* TMMAFNetworkReachabilityManager.m in Sources */,
+				1D31FC382175F28B0014712B /* UIScrollView+TMMHook.m in Sources */,
+				1D31FC2E2175F28B0014712B /* TMMHookHelper.m in Sources */,
+				1D31FC192175F2260014712B /* UIView+Toast.m in Sources */,
+				1D31FC482175F2910014712B /* UIImageView+Networking.m in Sources */,
+				1D31FC522175F2A40014712B /* TMMAFURLRequestSerialization.m in Sources */,
+				1D31FC362175F28B0014712B /* UINavigationController+TMMHook.m in Sources */,
+				1D31FC322175F28B0014712B /* UIApplication+TMMHook.m in Sources */,
+				1D31FC222175F2590014712B /* TMMJSONKeyMapper.m in Sources */,
+				1D31FC0A2175F0F30014712B /* TMMDevice.m in Sources */,
+				1D31FC3A2175F28B0014712B /* UITabBarController+TMMHook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D5FF691215BB379001E69CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -862,6 +1111,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1D31FBEF2175EB720014712B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D31FBF02175EB720014712B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D31FBF42175EB730014712B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D31FBF52175EB730014712B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		1D5FF6B6215BD9B2001E69CD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -939,6 +1204,47 @@
 				DEVELOPMENT_TEAM = 54X3D7LXEG;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1D31FBFA2175EB730014712B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/PrefixHeader.pch";
+				INFOPLIST_FILE = "TMMSDK-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tokenmama.TMMSDK-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D31FBFB2175EB730014712B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54X3D7LXEG;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/PrefixHeader.pch";
+				INFOPLIST_FILE = "TMMSDK-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tokenmama.TMMSDK-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1220,6 +1526,15 @@
 			buildConfigurations = (
 				1D2CC8752111D16100F91A7B /* Debug */,
 				1D2CC8762111D16100F91A7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D31FBFC2175EB730014712B /* Build configuration list for PBXNativeTarget "TMMSDK-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D31FBFA2175EB730014712B /* Debug */,
+				1D31FBFB2175EB730014712B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
