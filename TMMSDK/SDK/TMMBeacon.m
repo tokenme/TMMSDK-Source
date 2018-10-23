@@ -196,7 +196,6 @@ static TMMBeacon* _instance = nil;
 }
 
 - (void)heartbeatSend{
-    __weak __typeof(self) weakSelf = self;
     NSUInteger du = _duration;
     if (du == 0) {
         return;
@@ -206,17 +205,19 @@ static TMMBeacon* _instance = nil;
     }
     TMMPingRequest * pingReq = [[TMMPingRequest alloc] initWithDuration:du device:_device logs:_logs];
     NSString *payload = [pingReq.toJSONString desEncryptWithKey: _appSecret];
+    __weak __typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (!weakSelf) return;
+        __strong typeof(self) strongSelf = weakSelf;
+        strongSelf.duration = 0;
+        [strongSelf.logs removeAllObjects];
+    });
     [TMMApi callMethod:@"device/ping"
                payload:payload
                    key:_appKey
                 secret:_appSecret
                success:^(NSURLSessionDataTask *task, id responseObject) {
-                   dispatch_async(dispatch_get_main_queue(), ^{
-                       if (!weakSelf) return;
-                       __strong typeof(self) strongSelf = weakSelf;
-                       strongSelf.duration = 0;
-                       [strongSelf.logs removeAllObjects];
-                   });
+                   //
                }
                failure:nil
      ];
@@ -326,5 +327,3 @@ static TMMBeacon* _instance = nil;
 }
 
 @end
-
-
